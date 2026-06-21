@@ -3,20 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Certified Salesforce Partners | Free Thinkers Consulting</title>
-  <meta name="description" content="Optimize your business with custom Salesforce solutions from Free Thinkers Consulting. Smart, scalable strategies that deliver." />
+  <title>Free Thinkers Consulting, Salesforce Partner</title>
+  <meta name="description" content="We're free thinkers, we question assumptions and build better Salesforce systems. Senior-led, business-first custom Salesforce development." />
 
-  <!-- Open Graph (kept from current site) -->
-  <meta property="og:title" content="Certified Salesforce Partners | Salesforce Developers" />
-  <meta property="og:description" content="Optimize your business with custom Salesforce solutions from Free Thinkers Consulting. Smart, scalable strategies that deliver." />
+  <meta property="og:title" content="Free Thinkers Consulting, Salesforce Partner" />
+  <meta property="og:description" content="Senior-led, business-first custom Salesforce development. We question, explore, and build better ways forward." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://freethinkersconsulting.com/" />
   <meta property="og:site_name" content="Free Thinkers Consulting" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css?v=12" />
 </head>
 <body>
 
@@ -24,14 +23,39 @@
   <header class="site-header" id="top">
     <div class="container header-inner">
       <a class="brand" href="/" aria-label="Free Thinkers Consulting home">
-        <img src="https://i0.wp.com/freethinkersconsulting.com/wp-content/uploads/2023/03/Freethinker-Logo.webp" alt="Free Thinkers Consulting" height="44" />
+        <img src="/assets/image.png" alt="Free Thinkers Consulting" height="38" />
       </a>
       <nav class="main-nav" aria-label="Primary">
-        <a href="/">Home</a>
-        <a href="/services/">Services</a>
-        <a href="/industries/">Industries</a>
+        <a href="/" aria-current="page">Home</a>
+        <div class="nav-item has-dropdown">
+          <a href="/products/">Products</a>
+          <div class="dropdown">
+            <a href="/products/#diy-salesforce">DIY Salesforce</a>
+            <a href="/products/#ai-readiness">AI Readiness</a>
+            <a href="/products/#revenue-leakage-detector">Revenue Leakage Detector</a>
+            <a href="/products/#data-quality">Data Quality Intelligence Platform</a>
+            <a href="/products/#change-impact-analyzer">Change Impact Analyzer</a>
+            <a href="/products/#quoting-proposal-engine">Quoting &amp; Proposal Engine</a>
+          </div>
+        </div>
+        <div class="nav-item has-dropdown">
+          <a href="/services/">Services</a>
+          <div class="dropdown">
+            <a href="/services/#managedservices">Managed Services</a>
+            <a href="/services/#design">Customize Your Salesforce</a>
+            <a href="/services/#architect">Revenue Accelerator</a>
+          </div>
+        </div>
+        <div class="nav-item has-dropdown">
+          <a href="/industries/">Industries</a>
+          <div class="dropdown">
+            <a href="/industries/#manufacture">Manufacturing</a>
+            <a href="/industries/#fintech">Fintech</a>
+            <a href="/industries/#professional">Professional Services</a>
+          </div>
+        </div>
         <a href="/about/">About</a>
-        <a class="btn btn-nav" href="/get-started/">Get Started</a>
+        <a class="btn btn-nav" href="/contact/">Let's Talk</a>
       </nav>
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -39,122 +63,247 @@
     </div>
   </header>
 
-  <!-- ===== Hero ===== -->
-  <section class="hero">
-    <div class="container hero-inner">
-      <div class="hero-copy">
-        <p class="eyebrow">Your Partner in Salesforce Development &amp; Integrations</p>
-        <h1>
-          We help you
-          <span class="rotator" id="rotator">streamline your revenue operations</span>
-        </h1>
-        <p class="lead">Strategic software consulting to help businesses achieve their objectives and maximize performance with custom-built, full-stack Salesforce solutions.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="/get-started/">Speak with an Expert</a>
-          <a class="btn btn-ghost" href="/about/">Learn More</a>
+  <!-- ════════════ WHY / HERO ════════════ -->
+  <section class="why" id="why">
+    <div class="why-orb"></div>
+    <div class="container">
+      <div class="why-inner">
+        <p class="why-eyebrow r">Why We Exist</p>
+
+        <div class="slider-track r d1" aria-label="What we believe">
+          <div class="slider-reel">
+            <span>We challenge the status quo.</span>
+            <span>We are free thinkers.</span>
+            <span>We ask why.</span>
+            <span>We love to build.</span>
+            <span>We question assumptions.</span>
+          </div>
+        </div>
+
+        <p class="why-sub r d2">
+          We don't accept "that's how it's always been done" as an answer.
+          We question, explore, and build better ways forward.
+        </p>
+
+        <div class="why-actions r d3">
+          <a href="/contact/" class="btn btn-primary btn-xl">Let's Talk</a>
+          <a href="#how" class="btn btn-outline btn-xl">How We Build</a>
         </div>
       </div>
-      <div class="hero-art">
-        <img src="https://i0.wp.com/freethinkersconsulting.com/wp-content/uploads/2026/04/image-9.webp" alt="Salesforce consulting illustration" />
-      </div>
     </div>
   </section>
 
-  <!-- ===== Process ===== -->
-  <section class="process">
+  <!-- ════════════ MARQUEE DIVIDER ════════════ -->
+  <div class="marquee-bar" aria-hidden="true">
+    <div class="marquee-track">
+      <div class="m-item"><span class="m-dot"></span>Salesforce Architecture</div>
+      <div class="m-item"><span class="m-dot"></span>Custom Development</div>
+      <div class="m-item"><span class="m-dot"></span>Lightning Web Components</div>
+      <div class="m-item"><span class="m-dot"></span>System Integrations</div>
+      <div class="m-item"><span class="m-dot"></span>Managed Services</div>
+      <div class="m-item"><span class="m-dot"></span>Optimization &amp; Automation</div>
+      <div class="m-item"><span class="m-dot"></span>Senior Expertise</div>
+      <div class="m-item"><span class="m-dot"></span>Salesforce Architecture</div>
+      <div class="m-item"><span class="m-dot"></span>Custom Development</div>
+      <div class="m-item"><span class="m-dot"></span>Lightning Web Components</div>
+      <div class="m-item"><span class="m-dot"></span>System Integrations</div>
+      <div class="m-item"><span class="m-dot"></span>Managed Services</div>
+      <div class="m-item"><span class="m-dot"></span>Optimization &amp; Automation</div>
+      <div class="m-item"><span class="m-dot"></span>Senior Expertise</div>
+    </div>
+  </div>
+
+  <!-- ════════════ HOW ════════════ -->
+  <section class="how" id="how">
     <div class="container">
-      <h2 class="section-title">How we work with you</h2>
-      <p class="section-sub">A proven path from discovery to long-term optimization.</p>
-      <div class="process-grid">
-        <article class="process-card">
-          <span class="step-num">01</span>
-          <h3>Discovery</h3>
-          <p>We delve into your business model, identify growth opportunities, and outline the Salesforce features that align with your goals.</p>
-        </article>
-        <article class="process-card">
-          <span class="step-num">02</span>
-          <h3>Strategy</h3>
-          <p>We craft a tailored Salesforce strategy focused on driving user adoption, maximizing ROI, and aligning with your processes.</p>
-        </article>
-        <article class="process-card">
-          <span class="step-num">03</span>
-          <h3>Planning</h3>
-          <p>We devise a comprehensive implementation plan with timelines, milestones, and a deployment process for a smooth transition.</p>
-        </article>
-        <article class="process-card">
-          <span class="step-num">04</span>
-          <h3>Assessment</h3>
-          <p>Identifying potential challenges early, we implement risk mitigation strategies to safeguard your Salesforce investment.</p>
-        </article>
-        <article class="process-card">
-          <span class="step-num">05</span>
-          <h3>Training &amp; Support</h3>
-          <p>We empower your team with the knowledge and tools they need through extensive training and ongoing support.</p>
-        </article>
-        <article class="process-card">
-          <span class="step-num">06</span>
-          <h3>Review &amp; Optimization</h3>
-          <p>Post-implementation, we analyze performance, gather feedback, and make iterative improvements to enhance efficiency.</p>
-        </article>
+      <div class="how-header">
+        <div>
+          <span class="sec-label r">How</span>
+          <h2 class="sec-title r d1">How We Build</h2>
+        </div>
+        <div>
+          <p class="sec-body r d1">
+            We bring together experienced Salesforce engineers, strategic thinking, and a
+            passion for solving complex problems. Every solution is designed around how your
+            business actually operates, creating systems that are practical, scalable, and built to last.
+          </p>
+        </div>
+      </div>
+
+      <div class="how-grid r d2">
+        <div class="how-card">
+          <div class="how-card-num">01</div>
+          <h3>Senior Expertise</h3>
+          <p>No junior handoffs. Every project is led by experienced experts who know how to solve complex business challenges.</p>
+        </div>
+        <div class="how-card">
+          <div class="how-card-num">02</div>
+          <h3>Business-First</h3>
+          <p>We design around your business processes, goals, and people, not generic templates or platform limitations.</p>
+        </div>
+        <div class="how-card">
+          <div class="how-card-num">03</div>
+          <h3>Custom Solutions</h3>
+          <p>Every solution is tailored to your unique needs, workflows, and growth objectives.</p>
+        </div>
+        <div class="how-card">
+          <div class="how-card-num">04</div>
+          <h3>Scalable Systems</h3>
+          <p>We build solutions that grow alongside your business.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== Clients ===== -->
-  <section class="clients">
+  <!-- ════════════ WHAT ════════════ -->
+  <section class="what" id="what">
     <div class="container">
-      <h2 class="section-title">Some of our valued clients</h2>
-      <div class="logo-strip">
-        <img src="https://i0.wp.com/freethinkersconsulting.com/wp-content/uploads/2024/09/BlueScope.png" alt="BlueScope" />
-        <img src="https://i0.wp.com/freethinkersconsulting.com/wp-content/uploads/2024/09/PacificInstitute.png" alt="Pacific Institute" />
-        <img src="https://i0.wp.com/freethinkersconsulting.com/wp-content/uploads/2024/09/TKG.webp" alt="TKG" />
-        <img src="https://i0.wp.com/freethinkersconsulting.com/wp-content/uploads/2024/09/UnitedFire.png" alt="United Fire" />
-        <img src="https://i0.wp.com/freethinkersconsulting.com/wp-content/uploads/2024/09/Parsley.ly_.webp" alt="Parsley.ly" />
-        <img src="https://i0.wp.com/freethinkersconsulting.com/wp-content/uploads/2026/04/MH-1.webp" alt="MH" />
-        <img src="https://i0.wp.com/freethinkersconsulting.com/wp-content/uploads/2026/04/Nf-logo-og-2.webp" alt="NF" />
+      <div class="what-inner">
+        <div>
+          <span class="sec-label r">What</span>
+          <h2 class="sec-title r d1">What We Do</h2>
+          <p class="sec-body r d2">
+            We are a Salesforce Partner. We help businesses grow by designing, building,
+            and optimizing custom Salesforce solutions.
+          </p>
+          <p class="what-supporting r d2">Strategy. Architecture. Development. Optimization.</p>
+
+          <div class="what-services r d3">
+            <a class="what-svc" href="/services/#architect"><span class="svc-dot"></span>Salesforce Architecture</a>
+            <a class="what-svc" href="/services/"><span class="svc-dot"></span>Custom Development</a>
+            <a class="what-svc" href="/services/"><span class="svc-dot"></span>Lightning Web Components</a>
+            <a class="what-svc" href="/services/"><span class="svc-dot"></span>Integrations</a>
+            <a class="what-svc" href="/services/#managedservices"><span class="svc-dot"></span>Managed Services</a>
+            <a class="what-svc" href="/services/"><span class="svc-dot"></span>Optimization &amp; Automation</a>
+          </div>
+        </div>
+
+        <div class="r d2">
+          <div class="what-img-wrap">
+            <img
+              src="/assets/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room-1.jpg"
+              alt="Free Thinkers Consulting Salesforce strategy session"
+              loading="lazy" />
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== Testimonials ===== -->
-  <section class="testimonials">
+  <!-- ════════════ CLIENT LOGOS ════════════ -->
+  <section class="logos">
     <div class="container">
-      <h2 class="section-title">What clients say</h2>
-      <div class="quote-grid">
-        <blockquote>
-          <p>"Olivia and her crew are the dream team when it comes to Salesforce custom development. I've been working in the space for 10 years, and there's no team I trust more to get the job done."</p>
-        </blockquote>
-        <blockquote>
-          <p>"I rely on Olivia and her team to build and maintain complex custom Salesforce development solutions and Lightning Web Components across multiple brands and instances, and they deliver every time."</p>
-          <cite>— Technical Product Manager, FairSquare</cite>
-        </blockquote>
-        <blockquote>
-          <p>"They have been outstanding to work with. They do great work, are very reliable and just a pleasure to work with."</p>
-        </blockquote>
-        <blockquote>
-          <p>"So happy with the custom CRM. Was using it today and it has exactly what I need. Thanks again!"</p>
-        </blockquote>
+      <h2 class="logos-label r">Trusted By Teams That Need Salesforce To Actually Work</h2>
+      <div class="logos-grid">
+        <div class="logo-tile r"><img src="/assets/BlueScope.png" alt="BlueScope" loading="lazy" /></div>
+        <div class="logo-tile r d1"><img src="/assets/PacificInstitute.png" alt="Pacific Institute" loading="lazy" /></div>
+        <div class="logo-tile r d2"><img src="/assets/GLS.svg" alt="GLS" loading="lazy" /></div>
+        <div class="logo-tile r d3"><img src="/assets/UnitedFire.png" alt="United Fire Group" loading="lazy" /></div>
+        <div class="logo-tile r d1"><img src="/assets/UMH.png" alt="UMH" loading="lazy" /></div>
+        <div class="logo-tile r d2"><img src="/assets/MH-1.webp" alt="MH" loading="lazy" /></div>
+        <div class="logo-tile r d3"><img src="/assets/FairSquare.svg" alt="FairSquare" loading="lazy" /></div>
       </div>
     </div>
   </section>
 
-  <!-- ===== Contact / Speak with an Expert ===== -->
-  <section class="contact" id="contact">
-    <div class="container contact-inner">
-      <div class="contact-copy">
-        <h2>Speak with an Expert</h2>
-        <p>Ready to take the next step toward transforming your business with Salesforce? Our experts guide you through every phase — from initial consultation to custom development and beyond. Send us your inquiry and a seasoned consultant will be in touch.</p>
+  <!-- ════════════ TESTIMONIALS ════════════ -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="t-header">
+        <span class="sec-label r">Client Stories</span>
+        <h2 class="sec-title r d1">What Our Clients Say</h2>
       </div>
-      <div class="contact-form">
-        <!-- ============================================================
-             SALESFORCE WEB-TO-LEAD FORM
-             Paste the exact existing embed/iframe from the current site
-             here. It will continue syncing leads to Salesforce unchanged.
-             Placeholder shown below for preview only.
-             ============================================================ -->
-        <div class="form-placeholder">
-          <p><strong>Salesforce Web-to-Lead form</strong></p>
-          <p>Your existing Salesforce iframe drops in here — untouched, still syncing to Salesforce.</p>
+
+      <div class="t-grid">
+        <div class="t-card r">
+          <div class="t-stars">★ ★ ★ ★ ★</div>
+          <p class="t-body">
+            "I've had the pleasure of working closely with Olivia and her team for more than a year now,
+            and I am confident when I recommend her to others as a top-tier Salesforce developer and consultant.
+            As a Technical Product Manager at FairSquare, <strong>I rely on Olivia and her team to build and
+            maintain complex custom Salesforce development solutions and Lightning Web Components across multiple
+            brands and Salesforce instances, and they deliver every time</strong>."
+          </p>
+          <div class="t-author">
+            <div class="t-avatar">TP</div>
+            <div>
+              <div class="t-name">Technical Product Manager</div>
+              <div class="t-role">FairSquare</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-card r d1">
+          <div class="t-stars">★ ★ ★ ★ ★</div>
+          <p class="t-body">
+            "<strong>Olivia and her crew are a dream team</strong> when it comes to Salesforce Custom Development.
+            I've been working in the space for 10 years, and <strong>there's no other team I trust more to get the
+            job done</strong>…"
+          </p>
+          <div class="t-author">
+            <div class="t-avatar">IN</div>
+            <div>
+              <div class="t-name">CEO</div>
+              <div class="t-role">INLAB</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-card r d2">
+          <div class="t-stars">★ ★ ★ ★ ★</div>
+          <p class="t-body">
+            "These folks are some of the best. I've been working in the SF sphere as an in-house
+            Admin/Dev/Architect for around 15 years. I've worked with many consultants, but
+            <strong>Free Thinkers is easily one of my favorites to work with</strong>. They're well versed
+            in a wide variety of Salesforce and have helped my current company build a number of
+            Lightning Web Components to maximize sales processes."
+          </p>
+          <div class="t-author">
+            <div class="t-avatar">UF</div>
+            <div>
+              <div class="t-name">Salesforce Manager</div>
+              <div class="t-role">United Fire</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-card r d3">
+          <div class="t-stars">★ ★ ★ ★ ★</div>
+          <p class="t-body">
+            "They built exactly what we needed and stayed with us through every iteration.
+            <strong>10/10 would hire them again</strong>."
+          </p>
+          <div class="t-author">
+            <div class="t-avatar">PA</div>
+            <div>
+              <div class="t-name">Project Manager</div>
+              <div class="t-role">Parse.ly</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ FINAL CTA ════════════ -->
+  <section class="final-cta" id="contact">
+    <div class="cta-orb"></div>
+    <div class="container">
+      <div class="cta-inner">
+        <span class="sec-label r" style="text-align:center;">Get Started</span>
+        <h2 class="cta-h2 r d1">Let's Build Something Better</h2>
+        <p class="cta-body r d2">
+          If Salesforce feels overly complicated, disconnected, or harder to manage than it should be,
+          we should talk. We help businesses turn Salesforce into a system that supports growth instead
+          of slowing it down.
+        </p>
+        <div class="cta-actions r d3">
+          <a href="/contact/" class="btn btn-primary btn-xl">Schedule a Conversation</a>
+        </div>
+        <div class="cta-trust r d4">
+          <span class="cta-trust-item"><span class="cta-check">✓</span> 100% Senior Team</span>
+          <span class="cta-trust-item"><span class="cta-check">✓</span> Salesforce Partner</span>
+          <span class="cta-trust-item"><span class="cta-check">✓</span> Free Consultation</span>
         </div>
       </div>
     </div>
@@ -164,13 +313,14 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <img src="https://i0.wp.com/freethinkersconsulting.com/wp-content/uploads/2023/03/image.png" alt="Free Thinkers Consulting" height="48" />
-        <p>A Salesforce development consultancy providing well-built, full-stack custom solutions.</p>
-        <img class="sf-badge" src="https://i0.wp.com/freethinkersconsulting.com/wp-content/uploads/2023/03/Salesforce_Partner_Badge_RGB.png" alt="Salesforce Partner" height="90" />
+        <img src="/assets/image.png" alt="Free Thinkers Consulting" height="40" />
+        <p>A Salesforce development consultancy. We question assumptions and build better ways forward.</p>
+        <img class="sf-badge" src="/assets/Salesforce_Partner_Badge_RGB.png" alt="Salesforce Partner" height="84" />
       </div>
       <div class="footer-col">
         <h4>Quick Links</h4>
         <a href="/why-salesforce/">Why Salesforce</a>
+        <a href="/products/">Products</a>
         <a href="/industries/">Industries</a>
         <a href="/services/">Services</a>
         <a href="/about/">About Us</a>
@@ -195,25 +345,7 @@
   </footer>
 
   <script>
-    // Rotating hero headline
     (function () {
-      var phrases = [
-        "streamline your revenue operations",
-        "build custom Salesforce systems",
-        "manage Salesforce long-term"
-      ];
-      var el = document.getElementById("rotator");
-      var i = 0;
-      if (el) {
-        setInterval(function () {
-          i = (i + 1) % phrases.length;
-          el.style.opacity = 0;
-          setTimeout(function () {
-            el.textContent = phrases[i];
-            el.style.opacity = 1;
-          }, 300);
-        }, 3000);
-      }
       document.getElementById("year").textContent = new Date().getFullYear();
 
       // Mobile nav toggle
@@ -224,6 +356,19 @@
           var open = nav.classList.toggle("open");
           toggle.setAttribute("aria-expanded", open);
         });
+      }
+
+      // Scroll reveals
+      var els = document.querySelectorAll(".r");
+      if ("IntersectionObserver" in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add("up"); io.unobserve(e.target); }
+          });
+        }, { threshold: 0.09, rootMargin: "0px 0px -32px 0px" });
+        els.forEach(function (el) { io.observe(el); });
+      } else {
+        els.forEach(function (el) { el.classList.add("up"); });
       }
     })();
   </script>
