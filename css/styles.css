@@ -121,9 +121,9 @@ header, section, footer, .container { position: relative; z-index: 1; }
   -webkit-backdrop-filter: saturate(160%) blur(16px);
   border-bottom: 1px solid var(--border);
 }
-.header-inner { display: flex; align-items: center; justify-content: space-between; height: 78px; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; height: 92px; }
 .brand { display: inline-flex; align-items: center; }
-.brand img { height: 56px; width: auto; display: block; }
+.brand img { height: 70px; width: auto; max-width: none; display: block; }
 .main-nav { display: flex; align-items: center; gap: 32px; }
 .main-nav a {
   font-family: var(--font); color: var(--text-2); font-weight: 500; font-size: 1rem;
@@ -177,7 +177,7 @@ header, section, footer, .container { position: relative; z-index: 1; }
 /* ── WHY / hero ── */
 .why {
   position: relative; overflow: hidden;
-  min-height: calc(100svh - 78px);
+  min-height: calc(100svh - 92px);
   display: flex; flex-direction: column; justify-content: center;
   padding: 96px 0 100px; text-align: center;
 }
@@ -510,9 +510,9 @@ header, section, footer, .container { position: relative; z-index: 1; }
 /* ===== Footer ===== */
 .site-footer { background: #050509; border-top: 1px solid var(--border); color: var(--text-3); padding: 64px 0 0; }
 .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 44px; padding-bottom: 44px; }
-.footer-brand img { height: 40px; width: auto; }
+.footer-mark { height: 56px; width: auto; display: block; }
 .footer-brand p { font-family: var(--font); max-width: 34ch; font-size: 1rem; margin: 18px 0 22px; color: var(--text-3); }
-.sf-badge { height: 84px; width: auto; opacity: .9; }
+.sf-badge { height: 112px; width: auto; opacity: .9; }
 .footer-col h4 { color: var(--text-1); font-family: var(--font); font-size: 1.05rem; font-weight: 700; margin-bottom: 16px; letter-spacing: 0; }
 .footer-col h4.mt { margin-top: 26px; }
 .footer-col a { font-family: var(--font); display: block; color: var(--text-3); margin-bottom: 11px; font-size: .96rem; }
@@ -576,7 +576,7 @@ header, section, footer, .container { position: relative; z-index: 1; }
   .sf-row { flex-direction: column; gap: 0; }
   .contact-form { padding: 26px; }
   .main-nav {
-    display: none; position: absolute; top: 78px; left: 0; right: 0;
+    display: none; position: absolute; top: 92px; left: 0; right: 0;
     flex-direction: column; gap: 0; background: rgba(11,11,20,.97);
     backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); padding: 12px 0;
   }
