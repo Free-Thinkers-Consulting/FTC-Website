@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Salesforce Org Health Score | Free Thinkers Consulting</title>
+<meta name="description" content="Grade your Salesforce org in 3 minutes. 20 blunt questions from the audit we run on enterprise orgs. No login required." />
+<meta name="robots" content="noindex, nofollow" />
+
+<!-- ============================================================
+     Leads route directly into Salesforce via Web-to-Lead
+     (org 00Da500000I9TVx, same endpoint as /contact).
+     Score, verdict, and section breakdown are written into the
+     Lead's Description field. Lead Source: "Org Health Scorecard"
+     (add it as a Lead Source picklist value in Setup for clean
+     reporting). Page is noindex on purpose: unlinked, for ads
+     and LinkedIn only. Remove the robots meta tag to change that.
+     ============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --paper:#FBFBF9;
+  --ink:#15171C;
+  --slate:#5B6270;
+  --line:#E3E2DC;
+  --cobalt:#1B4FD8;
+  --cobalt-soft:#EDF1FD;
+  --green:#1E7F4F;
+  --amber:#C1770A;
+  --red:#C03028;
+  --red-soft:#FBEEED;
+  --radius:10px;
+  --font-display:'Archivo',system-ui,sans-serif;
+  --font-mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--font-display);
+  font-size:17px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  min-height:100svh;
+}
+.wrap{max-width:640px;margin:0 auto;padding:0 20px}
+
+/* ---------- top bar ---------- */
+.topbar{
+  border-bottom:1px solid var(--line);
+  padding:14px 0;
+}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{
+  font-family:var(--font-mono);
+  font-size:12px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--slate);
+}
+.brand b{color:var(--ink);font-weight:600}
+.doc-tag{
+  font-family:var(--font-mono);
+  font-size:11px;
+  letter-spacing:.1em;
+  color:var(--cobalt);
+  border:1px solid var(--cobalt);
+  border-radius:999px;
+  padding:3px 10px;
+  white-space:nowrap;
+}
+
+/* ---------- screens ---------- */
+.screen{display:none;padding:48px 0 80px}
+.screen.active{display:block;animation:rise .35s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  .screen.active{animation:none}
+  *{transition:none!important;animation:none!important}
+}
+
+/* ---------- intro ---------- */
+.kicker{
+  font-family:var(--font-mono);
+  font-size:12px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--cobalt);
+  margin-bottom:18px;
+}
+h1{
+  font-weight:800;
+  font-stretch:87%;
+  font-size:clamp(34px,7vw,52px);
+  line-height:1.04;
+  letter-spacing:-.015em;
+  margin-bottom:20px;
+}
+.lede{color:var(--slate);font-size:18px;max-width:52ch;margin-bottom:30px}
+.lede b{color:var(--ink)}
+.spec-list{
+  border-top:1px solid var(--line);
+  margin-bottom:36px;
+}
+.spec{
+  display:flex;justify-content:space-between;gap:16px;
+  padding:12px 0;border-bottom:1px solid var(--line);
+  font-size:15px;
+}
+.spec dt{color:var(--slate)}
+.spec dd{font-family:var(--font-mono);font-size:13px;font-weight:500}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-family:var(--font-display);
+  font-weight:700;font-size:16px;
+  background:var(--ink);color:var(--paper);
+  border:1px solid var(--ink);
+  border-radius:var(--radius);
+  padding:15px 26px;
+  cursor:pointer;
+  transition:transform .12s ease, background .12s ease;
+  text-decoration:none;
+}
+.btn:hover{background:var(--cobalt);border-color:var(--cobalt);transform:translateY(-1px)}
+.btn:focus-visible{outline:3px solid var(--cobalt);outline-offset:2px}
+.btn.block{width:100%}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--cobalt-soft);color:var(--cobalt);border-color:var(--cobalt)}
+.fineprint{margin-top:14px;font-size:13px;color:var(--slate)}
+
+/* ---------- quiz ---------- */
+.meter{
+  display:flex;align-items:baseline;justify-content:space-between;
+  font-family:var(--font-mono);font-size:12px;letter-spacing:.08em;
+  color:var(--slate);text-transform:uppercase;
+  margin-bottom:10px;
+}
+.meter .qnum{color:var(--ink);font-weight:600}
+.bar{
+  height:4px;background:var(--line);border-radius:2px;overflow:hidden;margin-bottom:36px;
+}
+.bar i{
+  display:block;height:100%;width:0%;
+  background:var(--cobalt);
+  transition:width .3s ease;
+}
+.q-section{
+  font-family:var(--font-mono);font-size:12px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--cobalt);margin-bottom:12px;
+}
+.q-text{
+  font-weight:700;font-stretch:92%;
+  font-size:clamp(22px,4.6vw,28px);
+  line-height:1.2;letter-spacing:-.01em;
+  margin-bottom:26px;
+  min-height:2.4em;
+}
+.opts{display:grid;gap:10px}
+.opt{
+  text-align:left;
+  font-family:var(--font-display);font-size:16px;font-weight:500;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:15px 18px;
+  cursor:pointer;
+  color:var(--ink);
+  transition:border-color .12s, background .12s, transform .12s;
+  display:flex;gap:12px;align-items:flex-start;
+}
+.opt:hover{border-color:var(--cobalt);background:var(--cobalt-soft)}
+.opt:focus-visible{outline:3px solid var(--cobalt);outline-offset:2px}
+.opt.picked{border-color:var(--cobalt);background:var(--cobalt-soft)}
+.opt .key{
+  font-family:var(--font-mono);font-size:12px;font-weight:600;
+  color:var(--slate);
+  border:1px solid var(--line);border-radius:6px;
+  min-width:24px;height:24px;
+  display:inline-flex;align-items:center;justify-content:center;
+  margin-top:1px;flex-shrink:0;
+}
+.opt:hover .key,.opt.picked .key{color:var(--cobalt);border-color:var(--cobalt)}
+.backlink{
+  margin-top:26px;background:none;border:none;
+  font-family:var(--font-mono);font-size:13px;color:var(--slate);
+  cursor:pointer;padding:6px 0;
+}
+.backlink:hover{color:var(--ink);text-decoration:underline}
+.backlink:focus-visible{outline:3px solid var(--cobalt);outline-offset:2px}
+
+/* ---------- gate ---------- */
+.gate-card{
+  background:#fff;border:1px solid var(--line);border-radius:14px;
+  padding:34px 28px;
+}
+.gate-card h2{
+  font-weight:800;font-stretch:90%;
+  font-size:clamp(26px,5.4vw,34px);line-height:1.1;margin-bottom:12px;letter-spacing:-.01em;
+}
+.gate-card p{color:var(--slate);margin-bottom:24px;font-size:16px}
+.field{margin-bottom:16px}
+.field label{
+  display:block;font-family:var(--font-mono);font-size:12px;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--slate);
+  margin-bottom:7px;
+}
+.field input{
+  width:100%;font-family:var(--font-display);font-size:16px;
+  padding:13px 14px;border:1px solid var(--line);border-radius:var(--radius);
+  background:var(--paper);color:var(--ink);
+}
+.field input:focus{outline:3px solid var(--cobalt);outline-offset:1px;border-color:var(--cobalt)}
+.err{display:none;color:var(--red);font-size:14px;margin:-6px 0 14px}
+.err.show{display:block}
+.gate-fine{font-size:13px;color:var(--slate);margin-top:14px;margin-bottom:0}
+
+/* ---------- results ---------- */
+.report-head{
+  font-family:var(--font-mono);font-size:12px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--slate);
+  display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;
+  border-bottom:2px solid var(--ink);padding-bottom:10px;margin-bottom:28px;
+}
+.scorepanel{
+  display:flex;align-items:center;gap:28px;flex-wrap:wrap;
+  margin-bottom:34px;
+}
+.bignum{
+  font-family:var(--font-mono);font-weight:600;
+  font-size:clamp(72px,17vw,110px);line-height:1;letter-spacing:-.04em;
+}
+.bignum small{font-size:.32em;color:var(--slate);font-weight:400;letter-spacing:0}
+.stamp{
+  font-family:var(--font-mono);font-weight:600;
+  font-size:clamp(15px,3.4vw,19px);letter-spacing:.18em;text-transform:uppercase;
+  border:3px solid currentColor;border-radius:8px;
+  padding:10px 18px;
+  transform:rotate(-4deg);
+  animation:stampIn .4s cubic-bezier(.2,1.4,.4,1) .25s both;
+}
+@keyframes stampIn{from{opacity:0;transform:rotate(-4deg) scale(1.6)}to{opacity:1;transform:rotate(-4deg) scale(1)}}
+.verdict-copy{font-size:17px;color:var(--slate);max-width:56ch;margin-bottom:36px}
+.verdict-copy b{color:var(--ink)}
+
+.flag{
+  border:1px solid var(--red);
+  background:var(--red-soft);
+  border-radius:var(--radius);
+  padding:20px 22px;
+  margin-bottom:36px;
+}
+.flag .flag-tag{
+  font-family:var(--font-mono);font-size:11px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--red);font-weight:600;
+  margin-bottom:8px;display:block;
+}
+.flag h3{font-size:19px;font-weight:700;margin-bottom:8px;letter-spacing:-.01em}
+.flag p{font-size:15px;color:#5c3532;margin:0}
+
+.sect-title{
+  font-family:var(--font-mono);font-size:12px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--slate);margin-bottom:16px;
+}
+.rows{margin-bottom:40px}
+.row{
+  display:grid;grid-template-columns:1fr auto;gap:6px 14px;
+  padding:12px 0;border-bottom:1px solid var(--line);align-items:center;
+}
+.row .rname{font-size:15px;font-weight:600}
+.row .rscore{font-family:var(--font-mono);font-size:13px;color:var(--slate)}
+.row .rbar{grid-column:1/-1;height:5px;background:var(--line);border-radius:3px;overflow:hidden}
+.row .rbar i{display:block;height:100%;width:0%;border-radius:3px;transition:width .7s ease .2s}
+
+.cta-block{
+  background:var(--ink);color:var(--paper);
+  border-radius:14px;padding:32px 28px;
+}
+.cta-block h3{
+  font-weight:800;font-stretch:90%;font-size:clamp(22px,5vw,28px);
+  line-height:1.15;letter-spacing:-.01em;margin-bottom:10px;
+}
+.cta-block p{color:#B9BDC7;font-size:15.5px;margin-bottom:22px}
+.cta-block .btn{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.cta-block .btn:hover{background:var(--cobalt);color:#fff;border-color:var(--cobalt)}
+.cta-block .alt{
+  margin-top:14px;font-size:14px;color:#B9BDC7;
+}
+.cta-block .alt a{color:var(--paper);text-decoration:underline;text-underline-offset:3px}
+.retake{
+  margin-top:26px;text-align:center;
+}
+.retake button{
+  background:none;border:none;font-family:var(--font-mono);
+  font-size:13px;color:var(--slate);cursor:pointer;text-decoration:underline;
+  text-underline-offset:3px;padding:6px;
+}
+footer{
+  border-top:1px solid var(--line);
+  padding:20px 0 34px;
+  font-family:var(--font-mono);font-size:12px;color:var(--slate);
+  text-align:center;
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="brand"><b>Free Thinkers</b> Consulting</span>
+    <span class="doc-tag">Org Health Report</span>
+  </div>
+</div>
+
+<!-- ============ INTRO ============ -->
+<section class="screen active" id="s-intro">
+  <div class="wrap">
+    <p class="kicker">Free · 3 minutes · No Salesforce login needed</p>
+    <h1>How healthy is your Salesforce org, really?</h1>
+    <p class="lede">20 blunt questions pulled straight from the audit we run on enterprise orgs. Answer honestly and get a <b>score out of 100</b>, a verdict, and the one risk you should fix first. No hype. That's the other guys.</p>
+    <dl class="spec-list">
+      <div class="spec"><dt>Questions</dt><dd>20</dd></div>
+      <div class="spec"><dt>Time</dt><dd>~3 min</dd></div>
+      <div class="spec"><dt>What you get</dt><dd>Score · verdict · top risk</dd></div>
+      <div class="spec"><dt>Sales pitch</dt><dd>Only if your org needs one</dd></div>
+    </dl>
+    <button class="btn" id="startBtn">Grade my org →</button>
+    <p class="fineprint">Built from real audits, not a marketing checklist.</p>
+  </div>
+</section>
+
+<!-- ============ QUIZ ============ -->
+<section class="screen" id="s-quiz">
+  <div class="wrap">
+    <div class="meter"><span class="qnum" id="qCounter">Q 1 / 20</span><span id="qSection">Ownership</span></div>
+    <div class="bar"><i id="qBar"></i></div>
+    <p class="q-section" id="qSectionBig">Ownership</p>
+    <h2 class="q-text" id="qText"></h2>
+    <div class="opts" id="qOpts" role="group"></div>
+    <button class="backlink" id="backBtn">← Previous question</button>
+  </div>
+</section>
+
+<!-- ============ EMAIL GATE ============ -->
+<section class="screen" id="s-gate">
+  <div class="wrap">
+    <div class="gate-card">
+      <h2>Your report is ready.</h2>
+      <p>Tell us where to file it. We'll show your score right here and email you the breakdown so you can forward it to whoever needs to see it.</p>
+      <form id="leadForm" novalidate>
+        <div class="field">
+          <label for="fName">Name</label>
+          <input id="fName" name="name" type="text" autocomplete="name" required />
+        </div>
+        <div class="field">
+          <label for="fEmail">Work email</label>
+          <input id="fEmail" name="email" type="email" autocomplete="email" required />
+        </div>
+        <p class="err" id="gateErr">Enter your name and a valid email to open your report.</p>
+        <div class="field">
+          <label for="fCompany">Company <span style="text-transform:none;letter-spacing:0">(optional)</span></label>
+          <input id="fCompany" name="company" type="text" autocomplete="organization" />
+        </div>
+        <button class="btn block" type="submit" id="gateBtn">Show my score</button>
+        <p class="gate-fine">No spam, no drip campaign from hell. Occasional straight talk about running Salesforce without an agency. Unsubscribe anytime.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESULTS ============ -->
+<section class="screen" id="s-results">
+  <div class="wrap">
+    <div class="report-head">
+      <span>Org Health Report</span>
+      <span id="rDate"></span>
+    </div>
+
+    <div class="scorepanel">
+      <div class="bignum"><span id="rScore">0</span><small>/100</small></div>
+      <div class="stamp" id="rStamp"></div>
+    </div>
+    <p class="verdict-copy" id="rCopy"></p>
+
+    <div class="flag" id="rFlag" hidden>
+      <span class="flag-tag">Fix this first</span>
+      <h3 id="rFlagTitle"></h3>
+      <p id="rFlagBody"></p>
+    </div>
+
+    <p class="sect-title">Score by area</p>
+    <div class="rows" id="rRows"></div>
+
+    <div class="cta-block">
+      <h3 id="ctaHead"></h3>
+      <p id="ctaBody"></p>
+      <a class="btn" id="ctaBtn" href="#" target="_blank" rel="noopener"></a>
+      <p class="alt" id="ctaAlt"></p>
+    </div>
+
+    <div class="retake"><button id="retakeBtn">Retake the scorecard</button></div>
+  </div>
+</section>
+
+<footer>© Free Thinkers Consulting · The CLARITY Method</footer>
+
+<script>
+/* ================= CONFIG: EDIT THESE 3 ================= */
+const CONFIG = {
+  sf: {
+    endpoint:  "https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8",
+    oid:       "00Da500000I9TVx",
+    retURL:    "https://freethinkersconsulting.com/thank-you/",
+    leadSource:"Org Health Scorecard"
+  },
+  auditUrl:  "https://calendly.com/olivia-freethinkersconsulting/30-minute-meeting",  // audit intro call
+  clarityUrl:"https://start.freethinkersconsulting.com"   // CLARITY Method page
+};
+/* ========================================================= */
+
+const SECTIONS = ["Ownership","Data you can trust","Adoption","Technical debt & risk","Money & honesty"];
+
+/* Each option: [label, points]: 5 healthy → 0 broken */
+const QUESTIONS = [
+ // Ownership
+ {s:0,t:"Who owns Salesforce at your company day-to-day?",o:[
+   ["A dedicated admin whose main job this is",5],
+   ["Someone doing it on top of their real job",3],
+   ["An outside partner or agency",1],
+   ["Honestly? Nobody",0]]},
+ {s:0,t:"If that person disappeared tomorrow, could anyone else explain how your org works?",o:[
+   ["Yes, it's documented",5],
+   ["Mostly, with some digging",3],
+   ["It's all in one person's head",1],
+   ["No, and it scares me",0]]},
+ {s:0,t:"Who originally built your Salesforce?",o:[
+   ["An experienced partner who still supports us",5],
+   ["A partner who's long gone",1],
+   ["We built it ourselves as we grew",1],
+   ["I genuinely don't know",0]]},
+ {s:0,t:"When did anyone last review what's built in your org vs. what you actually use?",o:[
+   ["Within the last year",5],
+   ["1 to 3 years ago",3],
+   ["Never",0],
+   ["What do you mean by \u201creview\u201d?",0]]},
+ // Data
+ {s:1,t:"Can you pull an accurate pipeline or revenue report from Salesforce, right now?",o:[
+   ["Yes, and leadership runs on it",5],
+   ["Yes, but someone \u201ccleans it up\u201d in Excel first",1],
+   ["We have reports; nobody trusts them",0],
+   ["We don't really use Salesforce reports",0]]},
+ {s:1,t:"When a number in Salesforce contradicts someone's gut, which wins?",o:[
+   ["Salesforce. The data's trusted",5],
+   ["Depends on the number",3],
+   ["The gut, every time",0]]},
+ {s:1,t:"How bad is your duplicate / junk data situation?",o:[
+   ["Under control, with rules and hygiene in place",5],
+   ["Annoying but livable",3],
+   ["People search twice before creating anything",1],
+   ["We've stopped noticing",0]]},
+ {s:1,t:"Where does your customer-facing team's activity actually live?",o:[
+   ["Salesforce is the system of record, period",5],
+   ["Most of it lands in Salesforce eventually",3],
+   ["Shadow spreadsheets everywhere",0]]},
+ // Adoption
+ {s:2,t:"Of the licenses you pay for, how many people actually log in weekly?",o:[
+   ["Nearly all",5],
+   ["Most",3],
+   ["Maybe half",1],
+   ["No idea",0]]},
+ {s:2,t:"When you rolled out Salesforce (or a big change), did anyone train the team?",o:[
+   ["Formal training plus ongoing enablement",5],
+   ["One session at launch",3],
+   ["\u201cHere's your login\u201d",0]]},
+ {s:2,t:"Does your leadership team agree on what Salesforce is for?",o:[
+   ["Yes, there's a clear shared purpose",5],
+   ["Roughly, with some friction",3],
+   ["Leaders want different things from it",0],
+   ["It's never been discussed",0]]},
+ {s:2,t:"How do frontline users talk about Salesforce?",o:[
+   ["\u201cIt helps me sell / serve\u201d",5],
+   ["Neutral. It's just there",3],
+   ["\u201cData entry for management\u201d",1],
+   ["Open resentment",0]]},
+ // Tech debt
+ {s:3,t:"When something breaks or needs a change, how long until it's fixed?",o:[
+   ["Days",5],
+   ["Weeks",3],
+   ["Months, or it joins a list that never shrinks",0]]},
+ {s:3,t:"Do you know how many automations are running in your org, and what they all do?",o:[
+   ["Yes, documented",5],
+   ["Someone probably knows",1],
+   ["Nobody knows; we're afraid to touch them",0]]},
+ {s:3,t:"Has an automation ever done something unexpected, like wrong emails or records changing mysteriously?",o:[
+   ["Never",5],
+   ["Once or twice, resolved",3],
+   ["Regularly, and we shrug",0]]},
+ {s:3,t:"Do former employees still have active logins or access?",o:[
+   ["No. Offboarding is airtight",5],
+   ["Probably not\u2026?",1],
+   ["Almost certainly yes",0]]},
+ // Money
+ {s:4,t:"Do you know your total annual Salesforce spend, including licenses, add-ons, partners, and tools?",o:[
+   ["To the dollar, and someone owns ROI on it",5],
+   ["Roughly",3],
+   ["No, and I'd rather not add it up",0]]},
+ {s:4,t:"Have you bought Salesforce add-ons or apps that nobody uses today?",o:[
+   ["No",5],
+   ["One or two",3],
+   ["Several. It's a graveyard",0]]},
+ {s:4,t:"When you ask \u201ccan Salesforce do X for us?\u201d, what's the usual answer?",o:[
+   ["\u201cYes,\u201d and it ships",5],
+   ["\u201cYes, but,\u201d then months and money",3],
+   ["\u201cWe'd have to hire someone to find out\u201d",1],
+   ["We've stopped asking",0]]},
+ {s:4,t:"Gut check: is your Salesforce an asset or a tax?",o:[
+   ["An asset. It makes us money",5],
+   ["Breakeven at best",3],
+   ["A tax we're resigned to",1],
+   ["A tax we resent",0]]}
+];
+
+/* Fear-generator questions (0-indexed): revenue trust, ex-employee access, unknown spend */
+const FLAGS = {
+  4:  {title:"Your revenue numbers can't be trusted.",
+       body:"If pipeline gets \u201ccleaned up\u201d in Excel before leadership sees it, decisions are being made on a version of reality that lives on one person's laptop. This is the failure that gets discovered at the worst possible moment: a board meeting, a fundraise, or a bad quarter."},
+  15: {title:"People who left your company may still have access.",
+       body:"Ex-employee logins are an open door to your customer data, and it's one of the first things a security review (or a lawyer) will ask about. It's also one of the fastest fixes on this entire list."},
+  16: {title:"You don't know what Salesforce actually costs you.",
+       body:"Licenses, add-ons, partners, and tools quietly stack up. Companies that finally add it up are routinely off by 30 to 50%, and unused spend is the easiest money you'll ever claw back."}
+};
+
+const VERDICTS = [
+ {min:80,label:"Running clean",color:"var(--green)",
+  copy:"Rare air. Your org is an <b>asset</b>, not a tax. The risk now isn't what's broken. It's drift: orgs like yours quietly degrade as people, processes, and priorities change. Protect the score.",
+  ctaHead:"Keep it this way.",
+  ctaBody:"Most orgs don't stay at this score without someone watching. When you're ready for a second set of eyes, or a plan to keep it clean as you scale, we should talk.",
+  ctaLabel:"Book a working session", cta:"audit",
+  ctaAlt:"Or steal our playbook: the CLARITY Method, the framework we use on enterprise builds."},
+ {min:55,label:"Creaking",color:"var(--amber)",
+  copy:"It works today, and it's <b>compounding debt</b> underneath. This is the cheapest moment you will ever have to fix it: every quarter you wait, the cleanup bill grows and the workarounds calcify into \u201chow we do things.\u201d",
+  ctaHead:"Fix it while it's still cheap.",
+  ctaBody:"You don't need a rescue. You need a punch list and a straight answer on what matters. The full audit gives you exactly that: findings, priorities, and what it costs to ignore each one.",
+  ctaLabel:"Get the full audit", cta:"audit",
+  ctaAlt:"Prefer to fix it yourself? The CLARITY Method is the exact framework we use, no agency required."},
+ {min:30,label:"At risk",color:"var(--red)",
+  copy:"This is the classic profile of an org that was <b>built fast and inherited by nobody</b>: homegrown, or handed off by a partner who's long gone. You're paying enterprise money for spreadsheet-level trust, and the people who could explain it are one resignation away from gone.",
+  ctaHead:"You already suspected this. Now you have it in writing.",
+  ctaBody:"The full audit goes where a questionnaire can't: inside the org itself. We inventory what's actually built, what's actually used, what's dangerous, and hand you a prioritized fix-first roadmap.",
+  ctaLabel:"Book the full audit", cta:"audit",
+  ctaAlt:"Budget tight? Start with the CLARITY Method and fix it yourself, in the right order."},
+ {min:0,label:"On fire",color:"var(--red)",
+  copy:"You knew before you clicked. This score usually means Salesforce has become a <b>tax everyone resents</b>: untrusted data, unknown automations, and money going out the door for a system working against you. The good news: we've seen worse, and it's recoverable.",
+  ctaHead:"Stop paying for a system that's working against you.",
+  ctaBody:"Before you rip anything out or sign with another agency, get an honest map of what you have. The audit tells you what to kill, what to keep, and what order to fix it in, from people with no incentive to sell you a rebuild.",
+  ctaLabel:"Book the rescue audit", cta:"audit",
+  ctaAlt:"Or start with the CLARITY Method and take back control yourself."}
+];
+
+/* ---------------- state ---------------- */
+let answers = new Array(QUESTIONS.length).fill(null);
+let cur = 0;
+
+const $ = id => document.getElementById(id);
+const screens = {intro:$("s-intro"),quiz:$("s-quiz"),gate:$("s-gate"),results:$("s-results")};
+function show(name){
+  Object.values(screens).forEach(s=>s.classList.remove("active"));
+  screens[name].classList.add("active");
+  window.scrollTo({top:0,behavior:"instant"});
+}
+
+/* ---------------- quiz ---------------- */
+function renderQ(){
+  const q = QUESTIONS[cur];
+  $("qCounter").textContent = `Q ${cur+1} / ${QUESTIONS.length}`;
+  $("qSection").textContent = SECTIONS[q.s];
+  $("qSectionBig").textContent = SECTIONS[q.s];
+  $("qBar").style.width = `${(cur/QUESTIONS.length)*100}%`;
+  $("qText").textContent = q.t;
+  const box = $("qOpts");
+  box.innerHTML = "";
+  q.o.forEach((opt,i)=>{
+    const b = document.createElement("button");
+    b.className = "opt" + (answers[cur]===i ? " picked" : "");
+    b.type = "button";
+    b.innerHTML = `<span class="key">${String.fromCharCode(65+i)}</span><span>${opt[0]}</span>`;
+    b.addEventListener("click",()=>{
+      answers[cur]=i;
+      [...box.children].forEach(c=>c.classList.remove("picked"));
+      b.classList.add("picked");
+      setTimeout(next,180);
+    });
+    box.appendChild(b);
+  });
+  $("backBtn").style.visibility = cur===0 ? "hidden" : "visible";
+}
+function next(){
+  if(cur < QUESTIONS.length-1){ cur++; renderQ(); }
+  else { show("gate"); $("fName").focus(); }
+}
+$("backBtn").addEventListener("click",()=>{ if(cur>0){cur--;renderQ();} });
+$("startBtn").addEventListener("click",()=>{ show("quiz"); renderQ(); });
+
+/* keyboard: A-D / 1-4 answer */
+document.addEventListener("keydown",e=>{
+  if(!screens.quiz.classList.contains("active")) return;
+  let idx = -1;
+  if(/^[1-4]$/.test(e.key)) idx = +e.key-1;
+  if(/^[a-dA-D]$/.test(e.key)) idx = e.key.toLowerCase().charCodeAt(0)-97;
+  const opts = $("qOpts").children;
+  if(idx>-1 && idx<opts.length) opts[idx].click();
+});
+
+/* ---------------- scoring ---------------- */
+function computed(){
+  let total=0;
+  const sec=[0,0,0,0,0];
+  QUESTIONS.forEach((q,i)=>{
+    const pick = answers[i]==null ? q.o.length-1 : answers[i];
+    const pts = q.o[pick][1];
+    total+=pts; sec[q.s]+=pts;
+  });
+  const verdict = VERDICTS.find(v=>total>=v.min);
+  /* worst-scoring fear generator */
+  let flag=null,worst=6;
+  Object.keys(FLAGS).forEach(k=>{
+    const i=+k, pick=answers[i], pts = pick==null?0:QUESTIONS[i].o[pick][1];
+    if(pts<=1 && pts<worst){worst=pts;flag=FLAGS[k];}
+  });
+  return {total,sec,verdict,flag};
+}
+
+/* ---------------- gate / lead ---------------- */
+$("leadForm").addEventListener("submit",async e=>{
+  e.preventDefault();
+  const name=$("fName").value.trim(), email=$("fEmail").value.trim(), company=$("fCompany").value.trim();
+  const ok = name.length>0 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  $("gateErr").classList.toggle("show",!ok);
+  if(!ok) return;
+  const r = computed();
+  /* split single name field for Salesforce first/last */
+  const parts = name.split(/\s+/);
+  const firstName = parts.length > 1 ? parts[0] : "";
+  const lastName  = parts.length > 1 ? parts.slice(1).join(" ") : parts[0];
+  const desc = [
+    "ORG HEALTH SCORECARD",
+    "Score: " + r.total + "/100  (" + r.verdict.label + ")",
+    "",
+    ...SECTIONS.map((sec,i)=> sec + ": " + r.sec[i] + "/20"),
+    "",
+    r.flag ? "Fix first: " + r.flag.title : "Fix first: none flagged",
+    "Submitted: " + new Date().toLocaleString()
+  ].join("\n");
+  const body = new URLSearchParams({
+    oid: CONFIG.sf.oid,
+    retURL: CONFIG.sf.retURL,
+    lead_source: CONFIG.sf.leadSource,
+    assign_using_active_assignment_rule: "true",
+    first_name: firstName,
+    last_name: lastName,
+    email: email,
+    company: company || "Not provided",
+    description: desc
+  });
+  $("gateBtn").textContent="Opening your report…"; $("gateBtn").disabled=true;
+  try{
+    await fetch(CONFIG.sf.endpoint,{
+      method:"POST",
+      mode:"no-cors",
+      headers:{ "Content-Type":"application/x-www-form-urlencoded" },
+      body: body.toString()
+    });
+  }catch(err){ console.warn("Web-to-Lead submit failed:",err); }
+  renderResults(r);
+  show("results");
+  $("gateBtn").textContent="Show my score"; $("gateBtn").disabled=false;
+});
+
+/* ---------------- results ---------------- */
+function renderResults(r){
+  $("rDate").textContent = new Date().toLocaleDateString(undefined,{year:"numeric",month:"short",day:"numeric"});
+  /* count-up */
+  const el=$("rScore");
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(reduce){ el.textContent=r.total; }
+  else{
+    let n=0; const step=Math.max(1,Math.round(r.total/40));
+    const t=setInterval(()=>{ n=Math.min(r.total,n+step); el.textContent=n; if(n>=r.total)clearInterval(t); },20);
+  }
+  const v=r.verdict;
+  const stamp=$("rStamp");
+  stamp.textContent=v.label;
+  stamp.style.color=v.color;
+  $("rCopy").innerHTML=v.copy;
+
+  if(r.flag){
+    $("rFlag").hidden=false;
+    $("rFlagTitle").textContent=r.flag.title;
+    $("rFlagBody").textContent=r.flag.body;
+  } else { $("rFlag").hidden=true; }
+
+  const rows=$("rRows"); rows.innerHTML="";
+  SECTIONS.forEach((s,i)=>{
+    const pct=(r.sec[i]/20)*100;
+    const col = pct>=75?"var(--green)":pct>=45?"var(--amber)":"var(--red)";
+    const row=document.createElement("div");
+    row.className="row";
+    row.innerHTML=`<span class="rname">${s}</span><span class="rscore">${r.sec[i]} / 20</span><div class="rbar"><i style="background:${col}"></i></div>`;
+    rows.appendChild(row);
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{ row.querySelector("i").style.width=pct+"%"; }));
+  });
+
+  $("ctaHead").textContent=v.ctaHead;
+  $("ctaBody").textContent=v.ctaBody;
+  const btn=$("ctaBtn");
+  btn.textContent=v.ctaLabel+" →";
+  btn.href=CONFIG.auditUrl;
+  $("ctaAlt").innerHTML=v.ctaAlt.replace("CLARITY Method",`<a href="${CONFIG.clarityUrl}" target="_blank" rel="noopener">CLARITY Method</a>`);
+}
+
+$("retakeBtn").addEventListener("click",()=>{
+  answers=new Array(QUESTIONS.length).fill(null); cur=0;
+  $("leadForm").reset();
+  show("intro");
+});
+</script>
+</body>
+</html>
