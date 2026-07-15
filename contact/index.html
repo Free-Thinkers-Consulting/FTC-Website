@@ -117,6 +117,8 @@
           <input type="hidden" name="retURL" value="https://freethinkersconsulting.com/thank-you/">
           <input type="hidden" name="assign_using_active_assignment_rule" value="true">
           <input type="hidden" name="lead_source" value="Web">
+          <!-- Set from /products/?product=... by the script below. Maps to the Lead's Product_of_Interest__c multi-select picklist (values must match Salesforce exactly). -->
+          <input type="hidden" id="Product_of_Interest__c" name="Product_of_Interest__c" value="">
 
           <div class="sf-row">
             <div class="sf-field">
@@ -203,6 +205,26 @@
           toggle.setAttribute("aria-expanded", open);
         });
       }
+
+      // Carry the clicked product (from /products/?product=...) into the Lead's
+      // Product_of_Interest__c multi-select picklist. Only exact, allow-listed picklist
+      // values are set, so nothing invalid ever reaches Salesforce.
+      var VALID_PRODUCTS = {
+        "DIY Salesforce": 1,
+        "AI Readiness": 1,
+        "Revenue Leakage Detector": 1,
+        "Data Quality Intelligence Platform": 1,
+        "Change Impact Analyzer": 1,
+        "Quoting & Proposal Engine": 1,
+        "Salesforce Audit": 1,
+        "Org Health Scorecard": 1
+      };
+      var productParam = new URLSearchParams(window.location.search).get("product");
+      if (productParam && VALID_PRODUCTS[productParam]) {
+        var poiField = document.getElementById("Product_of_Interest__c");
+        if (poiField) { poiField.value = productParam; }
+      }
+
       var sfForm = document.getElementById("ftcWebToLeadForm");
       if (sfForm) {
         sfForm.addEventListener("submit", function () {
