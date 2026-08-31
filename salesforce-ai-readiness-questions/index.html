@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JH1Y4WZPBW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-JH1Y4WZPBW');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Salesforce AI Readiness: 7 Questions to Ask First | Free Thinkers Consulting</title>
+  <meta name="description" content="Before enabling another Salesforce AI feature, evaluate the use case, data, permissions, ownership, risk, and expected return with these seven questions." />
+  <meta property="og:title" content="Before You Turn On Another Salesforce AI Feature, Answer These 7 Questions | Free Thinkers Consulting" />
+  <meta property="og:description" content="AI readiness is not a product setting. Seven questions to answer before you enable another Salesforce AI feature or start an Agentforce project." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://freethinkersconsulting.com/salesforce-ai-readiness-questions/" />
+  <meta property="og:site_name" content="Free Thinkers Consulting" />
+  <meta property="og:image" content="https://freethinkersconsulting.com/assets/blog/salesforce-ai-readiness-questions.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css?v=13" />
+  <link rel="canonical" href="https://freethinkersconsulting.com/salesforce-ai-readiness-questions/" />
+</head>
+<body>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Free Thinkers Consulting home">
+        <img src="/assets/image.png" alt="Free Thinkers Consulting" height="38" />
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <a href="/">Home</a>
+        <div class="nav-item has-dropdown">
+          <a href="/products/">Products</a>
+          <div class="dropdown">
+            <a href="/products/#diy-salesforce">DIY Salesforce</a>
+            <a href="/ai-readiness/">AI Readiness</a>
+            <a href="/revenue-leakage-detector/">Revenue Leakage Detector</a>
+            <a href="/data-quality/">Data Quality Intelligence Platform</a>
+            <a href="/change-impact-analyzer/">Change Impact Analyzer</a>
+            <a href="/quoting-proposal-engine/">Quoting &amp; Proposal Engine</a>
+            <a href="/salesforce-audit/">Salesforce Audit</a>
+            <a href="/scorecard/">Org Health Scorecard (Free)</a>
+          </div>
+        </div>
+        <div class="nav-item has-dropdown">
+          <a href="/services/">Services</a>
+          <div class="dropdown">
+            <a href="/services/#managedservices">Managed Services</a>
+            <a href="/services/#design">Customize Your Salesforce</a>
+            <a href="/services/#architect">Revenue Accelerator</a>
+          </div>
+        </div>
+        <div class="nav-item has-dropdown">
+          <a href="/industries/">Industries</a>
+          <div class="dropdown">
+            <a href="/industries/#manufacture">Manufacturing</a>
+            <a href="/industries/#fintech">Fintech</a>
+            <a href="/industries/#professional">Professional Services</a>
+          </div>
+        </div>
+        <a href="/about/">About</a>
+        <a class="btn btn-nav" href="/contact/">Let's Talk</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="article-hero">
+    <div class="container article-wrap">
+      <p class="meta">August 31, 2026 · Blog</p>
+      <h1>Before You Turn On Another Salesforce AI Feature, Answer These 7 Questions</h1>
+    </div>
+  </section>
+
+  <article class="article">
+    <div class="article-wrap">
+      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--border);margin-bottom:8px;">
+        <img src="/assets/blog/salesforce-ai-readiness-questions.jpg" alt="Seven questions to answer before enabling a Salesforce AI or Agentforce feature" loading="lazy" style="width:100%;display:block;" />
+      </div>
+      <div class="article-body">
+
+<p>Salesforce keeps making it easier to turn on AI.</p>
+<p>That does not mean your business is ready to use it.</p>
+<p>The button is the easy part. The hard part is deciding what the AI should do, what information it can trust, what it is allowed to touch, what happens when it gets something wrong, and whether the result will be worth the time and cost.</p>
+<p>This matters even more as Salesforce AI moves beyond suggesting an email or summarizing a record. An AI agent may retrieve information, update records, trigger a flow, answer a customer, or complete a series of actions. The more it can do, the less useful &ldquo;Let&rsquo;s turn it on and see what happens&rdquo; becomes as an implementation strategy.</p>
+<p>AI readiness is not a product setting. It is the business&rsquo;s ability to give AI a clear job, reliable context, appropriate boundaries, and accountable ownership.</p>
+<p>Before you enable another Salesforce AI feature or begin an Agentforce project, answer these seven questions.</p>
+
+<h2>1. What exact job are we asking AI to do?</h2>
+<p>&ldquo;Help sales&rdquo; is not a use case.</p>
+<p>Neither is &ldquo;improve productivity&rdquo; or &ldquo;use Agentforce.&rdquo; Those are ambitions. A usable AI project begins with a specific job performed for a specific person at a specific point in a process.</p>
+<p>For example:</p>
+<ul>
+<li>Summarize the last 90 days of account activity before a renewal call</li>
+<li>Draft a follow-up email after a discovery meeting using approved product information</li>
+<li>Answer a customer&rsquo;s order-status question after verifying identity</li>
+<li>Identify inbound leads that meet agreed qualification criteria and route them to the right team</li>
+</ul>
+<p>Now the business can evaluate what data the feature needs, what actions it should take, which exceptions matter, and how success will be measured.</p>
+<p>The best first use case is often not the flashiest one. It is a narrow, repetitive task with enough volume to matter and an outcome you can verify. If the process is poorly defined, full of exceptions, or different every time, adding AI may only help the confusion move faster.</p>
+<p><strong>Ask:</strong> Can we describe the job, user, trigger, desired outcome, and stopping point in a few sentences?</p>
+
+<h2>2. Does the process work before AI gets involved?</h2>
+<p>AI does not remove the need for process design. It makes weak process design harder to ignore.</p>
+<p>Imagine asking an agent to move an opportunity forward when nobody agrees what must happen before a deal changes stages. Or asking it to recommend a discount when pricing rules live partly in Salesforce, partly in a spreadsheet, and partly in a sales manager&rsquo;s head.</p>
+<p>The agent needs more than instructions that sound good in a meeting. It needs rules that hold up in real situations.</p>
+<p>Map the current process. Identify who owns each decision, which inputs are required, what the normal path looks like, and where exceptions go. If the team cannot agree on those basics, the AI project is not ready for configuration. It is ready for a business-process conversation.</p>
+<p>That is not a delay. It is the work that prevents an impressive demo from becoming an unreliable production tool.</p>
+<p><strong>Ask:</strong> If a capable new employee followed our documented process, would they know what to do without guessing?</p>
+
+<h2>3. Is the data fit for this use case?</h2>
+<p>Your entire Salesforce org does not need to be spotless before you begin. The data required for this particular job does need to be trustworthy enough for the decision or action you are handing over.</p>
+<p>That distinction matters.</p>
+<p>Salesforce defines AI-ready data as <a href="https://trailhead.salesforce.com/content/learn/modules/ai-data-readiness-assessment-fundamentals/explore-data-readiness-for-ai" rel="noopener">accessible, complete, contextual, compliant, and correct</a>. In practical terms, that means asking whether the right records and documents exist, whether they are current, whether important context is missing, and whether the AI can distinguish an approved source from an outdated one.</p>
+<p>A service agent grounded in old policy documents can answer confidently and still be wrong. A renewal assistant cannot reliably surface risk when contract dates are missing. A sales assistant cannot summarize the relationship accurately when half the meaningful activity lives outside Salesforce.</p>
+<p>Do not begin by launching a vague, org-wide &ldquo;data cleanup.&rdquo; Start with the use case. Name the critical fields, records, knowledge articles, documents, and connected systems it requires. Then evaluate those sources against the actual consequence of an incorrect or incomplete answer.</p>
+<p><strong>Ask:</strong> What information must be correct for this feature to be useful, and how will we know when it is not reliable enough to proceed?</p>
+
+<h2>4. What can the AI see, and what can it do?</h2>
+<p>Access is not a setup detail to resolve at the end.</p>
+<p>An AI feature may need to read a case, search knowledge, update an opportunity, send a message, call a flow, or reach into another system. Each additional source and action expands both its usefulness and its risk.</p>
+<p>Salesforce describes Agentforce security as a <a href="https://www.salesforce.com/company/ethical-and-humane-use/responsible-ai-governance/" rel="noopener">shared responsibility</a>. The platform supplies the foundation, but the customer is still responsible for configuring access, permissions, and agent-specific controls. The safest starting point is least privilege: give the AI only the data and actions required for the approved use case, not broad access just in case it becomes useful later.</p>
+<p>Review object access, field access, record visibility, connected systems, available actions, and the identity under which those actions run. Pay special attention to sensitive customer data and actions that create, change, disclose, or delete information.</p>
+<p>The important question is not merely, &ldquo;Can the agent do this?&rdquo; It is, &ldquo;Under exactly which conditions should it be allowed to?&rdquo;</p>
+<p><strong>Ask:</strong> If this feature used every permission we give it, would we still be comfortable with the result?</p>
+
+<h2>5. What could go wrong, and where does a human step in?</h2>
+<p>Every worthwhile AI use case has a failure mode.</p>
+<p>The AI might use outdated information, misunderstand intent, expose something it should not, take an incorrect action, or produce an answer that sounds more certain than the source material deserves. The point of risk planning is not to imagine every bizarre possibility. It is to identify the failures that would matter most and design for them before launch.</p>
+<p>Consider the people affected, the sensitivity of the data, the reversibility of the action, and the cost of being wrong. Drafting an internal call summary is not the same risk as changing a contract term or answering a customer about a refund.</p>
+<p>Higher-impact uses need stronger controls. That may include approval before action, clear disclosure that AI is involved, confidence thresholds, restricted topics, audit trails, and a defined path to a qualified person. Salesforce&rsquo;s <a href="https://www.salesforce.com/company/ethical-and-humane-use/responsible-ai-governance/" rel="noopener">responsible AI guidance</a> specifically emphasizes human review for high-impact decisions and continued monitoring after deployment.</p>
+<p>&ldquo;Human in the loop&rdquo; should not mean &ldquo;someone will probably notice if things get weird.&rdquo; Name the person, trigger, and response.</p>
+<p><strong>Ask:</strong> Which outcomes require review, escalation, correction, or an immediate stop?</p>
+
+<h2>6. Who owns the feature after launch?</h2>
+<p>AI is not a one-time configuration that can be handed a small plant and left alone near a sunny window.</p>
+<p>Business rules change. Products change. Knowledge articles age. Users ask questions nobody anticipated. New failure patterns appear only after real people interact with the feature.</p>
+<p>Someone needs to own business performance, not just technical uptime. That owner should review usage, task completion, escalations, incorrect answers, user feedback, data quality, and consumption. They also need the authority to update instructions, fix source content, adjust permissions, retrain users, or pause the feature.</p>
+<p>Salesforce&rsquo;s own <a href="https://architect.salesforce.com/docs/architect/fundamentals/guide/agent-development-lifecycle.html" rel="noopener">agent-development guidance</a> treats deployment as one stage in a larger lifecycle that includes testing, monitoring, analytics, and continuous refinement. That is a useful expectation to set with leadership before the pilot begins.</p>
+<p>Choose the owner before launch. &ldquo;Salesforce team&rdquo; is a department, not an accountable name.</p>
+<p><strong>Ask:</strong> Who reviews performance, how often do they review it, and what can they change when the feature misses the mark?</p>
+
+<h2>7. What result would make this worth it?</h2>
+<p>AI ROI cannot be measured with enthusiasm.</p>
+<p>Define the baseline before the feature changes it. How long does the task take today? How often does it happen? What does an error cost? How much work reaches completion? What is the current customer or employee experience?</p>
+<p>Then choose a small set of measures tied to the job. That could include time saved per case, faster first response, fewer manual touches, improved completion rate, lower escalation volume, or better data capture. Pair efficiency with quality so the team does not celebrate faster work that creates more cleanup later.</p>
+<p>Include the full cost. Agentforce offers several buying models, including usage measured through Flex Credits, and Salesforce provides near-real-time consumption information through Digital Wallet. Licensing or credits are only part of the investment. Add implementation, data preparation, testing, monitoring, maintenance, training, and the human time required to review exceptions.</p>
+<p>A pilot does not need a perfect financial model. It does need a definition of success strong enough to support a continue, change, or stop decision.</p>
+<p><strong>Ask:</strong> What measurable improvement are we buying, what will it cost to operate, and when will we decide whether to scale it?</p>
+
+<h2>Readiness does not mean perfection</h2>
+<p>You do not need to solve every Salesforce problem before using AI. You do need enough clarity to understand which problems could affect the use case you selected.</p>
+<p>If you can answer these seven questions, you are in a much better position to run a focused pilot:</p>
+<ul>
+<li>What exact job will AI perform?</li>
+<li>Does the underlying process work?</li>
+<li>Is the required data fit for purpose?</li>
+<li>What can the AI see and do?</li>
+<li>What are the material risks and human checkpoints?</li>
+<li>Who owns performance after launch?</li>
+<li>What measurable return would make it worthwhile?</li>
+</ul>
+<p>If several answers are still &ldquo;we have not decided,&rdquo; the next step is not another feature toggle. It is an AI-readiness plan.</p>
+<p>Free Thinkers Consulting&rsquo;s <strong>AI Readiness</strong> assessment evaluates the data, security, and processes behind your Salesforce AI and Agentforce plans. You leave with a clear roadmap for what to fix, what to test, and where AI can create real value without introducing risk you did not intend to buy.</p>
+<p><a href="/ai-readiness/"><strong>Learn more about AI Readiness &#8594;</strong></a></p>
+
+      </div>
+      <p style="margin-top:44px;"><a href="/blog/" style="font-weight:600;">← Back to all posts</a></p>
+    </div>
+  </article>
+
+  <section class="cta-band">
+    <div class="container">
+      <h2>Find Out Whether Your Salesforce Is Ready for AI</h2>
+      <p>Our AI Readiness assessment reviews the data, security, and processes behind your Salesforce AI and Agentforce plans, then shows you what to fix first.</p>
+      <a class="btn btn-light" href="/ai-readiness/">Explore AI Readiness <span class="arrow">&#8594;</span></a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img class="footer-mark" src="/assets/ftc-icon.png" alt="Free Thinkers Consulting" />
+        <p>A Salesforce development consultancy. We question assumptions and build better ways forward.</p>
+        <img class="sf-badge" src="/assets/Salesforce_Partner_Badge_RGB.png" alt="Salesforce Partner" height="90" />
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="/why-salesforce/">Why Salesforce</a>
+        <a href="/products/">Products</a>
+        <a href="/industries/">Industries</a>
+        <a href="/services/">Services</a>
+        <a href="/about/">About Us</a>
+        <a href="/contact/">Contact Us</a>
+        <a href="/cases/">Case Studies</a>
+        <a href="/blog/">Blog</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://www.linkedin.com/company/free-thinkers-consulting">LinkedIn</a>
+        <a href="https://www.instagram.com/freethinkersconsulting/">Instagram</a>
+        <a href="https://www.youtube.com/@freethinkersconsulting">YouTube</a>
+        <a href="https://www.tiktok.com/@your_salesforce_partner">TikTok</a>
+        <h4 class="mt">Locations</h4>
+        <p>Brandon, FL 33511</p>
+        <p>San Diego, CA 92110</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© <span id="year"></span> Free Thinkers Consulting. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      document.getElementById("year").textContent = new Date().getFullYear();
+      var toggle = document.querySelector(".nav-toggle");
+      var nav = document.querySelector(".main-nav");
+      if (toggle) { toggle.addEventListener("click", function () { var open = nav.classList.toggle("open"); toggle.setAttribute("aria-expanded", open); }); }
+    })();
+  </script>
+</body>
+</html>
