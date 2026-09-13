@@ -1112,6 +1112,7 @@ action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&or
 method="POST"
 style="margin:0;"
 id="ftcWebToLeadForm"
+data-lead-guard
 >
 <!-- Salesforce Required -->
 <input type="hidden" name="oid" value="00Da500000I9TVx">
@@ -1181,6 +1182,8 @@ style="width:100%;padding:16px;font-size:16px;border-radius:12px;border:1px soli
 ></textarea>
 </div>
 
+<div class="lead-guard" data-theme="light"></div>
+
 <!-- SUBMIT BUTTON -->
 <button id="submitButton" type="submit" style="
 width:100%;
@@ -1227,6 +1230,7 @@ to { transform: rotate(360deg); }
 </style>
 
 <!-- SUBMIT LOGIC -->
+<script src="/js/lead-form-guard.js?v=1"></script>
 <script type="text/rocketlazyloadscript">
 document.getElementById("ftcWebToLeadForm").addEventListener("submit", function() {
 const btn = document.getElementById("submitButton");
