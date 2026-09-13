@@ -352,7 +352,7 @@ footer{
     <div class="gate-card">
       <h2>Your report is ready.</h2>
       <p>Tell us where to file it. We'll show your score right here and email you the breakdown so you can forward it to whoever needs to see it.</p>
-      <form id="leadForm" novalidate>
+      <form id="leadForm" novalidate data-lead-guard>
         <div class="field">
           <label for="fName">Name</label>
           <input id="fName" name="name" type="text" autocomplete="name" required />
@@ -366,6 +366,7 @@ footer{
           <label for="fCompany">Company <span style="text-transform:none;letter-spacing:0">(optional)</span></label>
           <input id="fCompany" name="company" type="text" autocomplete="organization" />
         </div>
+        <div class="lead-guard" data-theme="light"></div>
         <button class="btn block" type="submit" id="gateBtn">Show my score</button>
         <p class="gate-fine">No spam, no drip campaign from hell. Occasional straight talk about running Salesforce without an agency. Unsubscribe anytime.</p>
       </form>
@@ -409,6 +410,7 @@ footer{
 
 <footer>© Free Thinkers Consulting · The CLARITY Method</footer>
 
+<script src="/js/lead-form-guard.js?v=1"></script>
 <script>
 /* ================= CONFIG: EDIT THESE 3 ================= */
 const CONFIG = {
@@ -665,7 +667,8 @@ $("leadForm").addEventListener("submit",async e=>{
     last_name: lastName,
     email: email,
     company: company || "Not provided",
-    description: desc
+    description: desc,
+    ...FTCLeadGuard.fields($("leadForm"))
   });
   $("gateBtn").textContent="Opening your report…"; $("gateBtn").disabled=true;
   try{
@@ -676,6 +679,7 @@ $("leadForm").addEventListener("submit",async e=>{
       body: body.toString()
     });
   }catch(err){ console.warn("Web-to-Lead submit failed:",err); }
+  FTCLeadGuard.reset($("leadForm"));
   renderResults(r);
   show("results");
   $("gateBtn").textContent="Show my score"; $("gateBtn").disabled=false;

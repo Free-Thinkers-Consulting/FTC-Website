@@ -90,7 +90,8 @@
             action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Da500000I9TVx"
             method="POST"
             id="ftcWebToLeadForm"
-            class="sf-form">
+            class="sf-form"
+            data-lead-guard>
             <input type="hidden" name="oid" value="00Da500000I9TVx">
             <input type="hidden" name="retURL" value="https://freethinkersconsulting.com/thank-you/">
             <input type="hidden" name="assign_using_active_assignment_rule" value="true">
@@ -161,6 +162,7 @@
     })();
   </script>
 
+  <script src="/js/lead-form-guard.js?v=1"></script>
   <script>
     // Salesforce web-to-lead requires last_name + company; the live form
     // populates them from the email before submit. Preserve that behavior.
