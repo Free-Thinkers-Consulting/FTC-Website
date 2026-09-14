@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JH1Y4WZPBW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-JH1Y4WZPBW');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Salesforce Audit or Reimplementation: How to Decide | Free Thinkers Consulting</title>
+  <meta name="description" content="Not sure if your Salesforce org needs a cleanup or a rebuild? Here&#39;s how to tell a repairable problem from a structural one before you decide." />
+  <meta property="og:title" content="Salesforce Audit or Reimplementation: How to Know Which One You Need | Free Thinkers Consulting" />
+  <meta property="og:description" content="Rebuild an org that only needed cleanup, and you&#39;ve spent months replacing something that was fixable. How to tell repairable from structural." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://freethinkersconsulting.com/salesforce-audit-or-reimplementation/" />
+  <meta property="og:site_name" content="Free Thinkers Consulting" />
+  <meta property="og:image" content="https://freethinkersconsulting.com/assets/blog/salesforce-audit-or-reimplementation.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css?v=13" />
+  <link rel="canonical" href="https://freethinkersconsulting.com/salesforce-audit-or-reimplementation/" />
+</head>
+<body>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Free Thinkers Consulting home">
+        <img src="/assets/image.png" alt="Free Thinkers Consulting" height="38" />
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <a href="/">Home</a>
+        <div class="nav-item has-dropdown">
+          <a href="/products/">Products</a>
+          <div class="dropdown">
+            <a href="/products/#diy-salesforce">DIY Salesforce</a>
+            <a href="/ai-readiness/">AI Readiness</a>
+            <a href="/revenue-leakage-detector/">Revenue Leakage Detector</a>
+            <a href="/data-quality/">Data Quality Intelligence Platform</a>
+            <a href="/change-impact-analyzer/">Change Impact Analyzer</a>
+            <a href="/quoting-proposal-engine/">Quoting &amp; Proposal Engine</a>
+            <a href="/salesforce-audit/">Salesforce Audit</a>
+            <a href="/scorecard/">Org Health Scorecard (Free)</a>
+          </div>
+        </div>
+        <div class="nav-item has-dropdown">
+          <a href="/services/">Services</a>
+          <div class="dropdown">
+            <a href="/services/#managedservices">Managed Services</a>
+            <a href="/services/#design">Customize Your Salesforce</a>
+          </div>
+        </div>
+        <div class="nav-item has-dropdown">
+          <a href="/industries/">Industries</a>
+          <div class="dropdown">
+            <a href="/industries/#manufacture">Manufacturing</a>
+            <a href="/industries/#fintech">Fintech</a>
+            <a href="/industries/#professional">Professional Services</a>
+          </div>
+        </div>
+        <a href="/about/">About</a>
+        <a class="btn btn-nav" href="/contact/">Let's Talk</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="article-hero">
+    <div class="container article-wrap">
+      <p class="meta">September 28, 2026 · Blog</p>
+      <h1>Salesforce Audit or Reimplementation: How to Know Which One You Need</h1>
+    </div>
+  </section>
+
+  <article class="article">
+    <div class="article-wrap">
+      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--border);margin-bottom:8px;">
+        <img src="/assets/blog/salesforce-audit-or-reimplementation.jpg" alt="Two Salesforce architecture diagrams side by side, one marked up with fixes" loading="lazy" style="width:100%;display:block;" />
+      </div>
+      <div class="article-body">
+
+<p>Something breaks in Salesforce again, and someone in the room finally asks the question that&rsquo;s been circling for months: do we scrap this and start over? It&rsquo;s a fair question. It&rsquo;s also usually asked too early, before anyone in the room actually knows what&rsquo;s wrong.</p>
+<p>That gap matters. Rebuild an org that only needed cleanup, and you&rsquo;ve spent months and a serious budget replacing something that was fixable. Patch around a foundational architecture problem instead, and you&rsquo;ll be back in this same meeting next year, older and more frustrated, with a longer list of workarounds holding the thing together.</p>
+<blockquote>Rebuild an org that only needed cleanup, and you&rsquo;ve spent months replacing something that was fixable.</blockquote>
+<p>Most teams don&rsquo;t know which situation they&rsquo;re in when they ask the question. That&rsquo;s exactly what an audit is for.</p>
+
+<h2>The real distinction: repairable vs. structural</h2>
+<p>Not every messy Salesforce org needs to be torn down. And not every org that &ldquo;sort of works&rdquo; is actually fine underneath. The difference comes down to where the problem lives.</p>
+<p><strong>Repairable problems</strong> are governance and configuration debt. Ownership is unclear. Data is messy but not corrupted. Adoption is inconsistent. Automations are tangled but still functional. Nobody has ever mapped how the pieces connect, so small changes feel riskier than they are, but the underlying structure can hold.</p>
+<p><strong>Structural problems</strong> live in the architecture itself. The data model was built around a business that no longer exists: an old billing structure, an org chart that got reorganized twice since setup, a sales motion that&rsquo;s changed completely. Every small change breaks two other things. The foundation, not the configuration on top of it, is what&rsquo;s fighting you.</p>
+<p>These require different fixes, at very different price points, and guessing wrong is expensive in either direction.</p>
+
+<h2>What a Salesforce Audit actually tells you</h2>
+<p>A Salesforce Audit is a senior-architect review of your automations, code, data model, security, adoption, and integrations, resulting in scored findings and a prioritized roadmap. It isn&rsquo;t a sales pitch for a rebuild, and it isn&rsquo;t a rubber stamp that everything&rsquo;s fine. It&rsquo;s the diagnostic step that tells you, with evidence instead of a gut feeling, which category your org actually falls into.</p>
+<p>That distinction is the entire point. Without it, you&rsquo;re deciding blind.</p>
+
+<h2>Signs you&rsquo;re actually looking at a reimplementation</h2>
+<ul>
+<li>Core objects were built around a business model the company doesn&rsquo;t run anymore</li>
+<li>The data model conflicts so badly with current process that fixes require workarounds stacked on other workarounds</li>
+<li>Nearly every change ripples into two or three unrelated breakages, because the dependencies were never designed with any separation</li>
+<li>Leadership has lost trust in the platform broadly, not just in one feature or report</li>
+</ul>
+<p>If dependency mapping shows that touching one field routinely breaks flows in three unrelated places, that&rsquo;s not a configuration problem you clean up in an afternoon. It&rsquo;s a sign the foundation itself needs to change, which is exactly the kind of risk the <a href="/change-impact-analyzer/">Change Impact Analyzer</a> is built to expose before a project starts, not after it breaks something in production.</p>
+
+<h2>Signs you&rsquo;re actually looking at an audit-and-fix</h2>
+<ul>
+<li>Adoption is inconsistent, but the underlying object structure still reflects how the business runs today</li>
+<li>Data is messy, duplicated, or incomplete, but not fundamentally miscategorized</li>
+<li>Nobody owns changes, and there&rsquo;s no documentation, which is a governance gap, not a design flaw</li>
+<li>Automations are tangled and hard to trust, but they&rsquo;re tangled because they accumulated without oversight, not because the data model beneath them is wrong</li>
+</ul>
+<p>Here&rsquo;s a composite example based on patterns we see often, not one specific client. A founder is convinced the org needs to be scrapped. It &ldquo;just feels broken.&rdquo; Deals stall in weird stages. Reports contradict each other. Every conversation about fixing it turns into a conversation about starting over instead.</p>
+<p>The audit finds something different. The core data model is sound. Accounts, opportunities, and the relationships between them still reflect how the business actually sells. The real problem is three years of undocumented automation bolted on one exception at a time, each one reasonable on its own, none of them documented, all of them now fighting each other. That&rsquo;s a cleanup project, not a rebuild.</p>
+<p>That pattern is well understood in the Salesforce architect community. Writing for the <a href="https://medium.com/salesforce-architects/how-architects-can-help-reduce-technical-debt-c0814bf8eaa" rel="noopener">Salesforce Architects publication</a>, Ian Gotts names poor documentation as the number one cause of technical debt: when nobody knows why a piece of metadata exists or what depends on it, it becomes too risky to change or remove, so teams build new pieces around it instead. From the outside, that looks like an org beyond saving. Underneath, it is often an org nobody has mapped.</p>
+<blockquote>An org that looks beyond saving is often just an org nobody has mapped.</blockquote>
+
+<h2>The cost of skipping the diagnosis</h2>
+<p>Guess wrong in either direction and it costs you. Reimplement an org that only needed cleanup, and you&rsquo;ve paid for months of rebuild work, disrupted the team through a second migration, and likely recreated some of the same undocumented shortcuts in the new org, because the habits that created the mess in the first place didn&rsquo;t change. Patch around a structural problem instead, and you&rsquo;re funding the same fire every few months, each fix a little more expensive than the last, until the &ldquo;quick patch&rdquo; budget quietly exceeds what a real rebuild would have cost two years ago.</p>
+<p>Neither mistake is really about Salesforce. Both are about making an expensive, foundational decision without the evidence to back it.</p>
+
+<h2>What to do next</h2>
+<p>Don&rsquo;t start with a vote in a leadership meeting about whether to rebuild. Start with a <a href="/salesforce-audit/">Salesforce Audit</a>. It&rsquo;s built to answer exactly this question, with a scored, prioritized view of what&rsquo;s actually wrong, so the decision that follows is based on your org, not on how frustrated the room felt that week.</p>
+<p><a href="/salesforce-audit/"><strong>Learn more about the Salesforce Audit &#8594;</strong></a></p>
+
+
+      </div>
+      <p style="margin-top:44px;"><a href="/blog/" style="font-weight:600;">← Back to all posts</a></p>
+    </div>
+  </article>
+
+  <section class="cta-band">
+    <div class="container">
+      <h2>Know Whether to Fix It or Rebuild It</h2>
+      <p>A senior-architect Salesforce Audit gives you scored findings and a prioritized roadmap, so the rebuild decision is based on evidence.</p>
+      <a class="btn btn-light" href="/salesforce-audit/">Explore the Salesforce Audit <span class="arrow">&#8594;</span></a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img class="footer-mark" src="/assets/ftc-icon.png" alt="Free Thinkers Consulting" />
+        <p>A Salesforce development consultancy. We question assumptions and build better ways forward.</p>
+        <img class="sf-badge" src="/assets/Salesforce_Partner_Badge_RGB.png" alt="Salesforce Partner" height="90" />
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="/why-salesforce/">Why Salesforce</a>
+        <a href="/products/">Products</a>
+        <a href="/industries/">Industries</a>
+        <a href="/services/">Services</a>
+        <a href="/about/">About Us</a>
+        <a href="/contact/">Contact Us</a>
+        <a href="/cases/">Case Studies</a>
+        <a href="/blog/">Blog</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://www.linkedin.com/company/free-thinkers-consulting">LinkedIn</a>
+        <a href="https://www.instagram.com/freethinkersconsulting/">Instagram</a>
+        <a href="https://www.youtube.com/@freethinkersconsulting">YouTube</a>
+        <a href="https://www.tiktok.com/@your_salesforce_partner">TikTok</a>
+        <h4 class="mt">Locations</h4>
+        <p>Brandon, FL 33511</p>
+        <p>San Diego, CA 92110</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© <span id="year"></span> Free Thinkers Consulting. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      document.getElementById("year").textContent = new Date().getFullYear();
+      var toggle = document.querySelector(".nav-toggle");
+      var nav = document.querySelector(".main-nav");
+      if (toggle) { toggle.addEventListener("click", function () { var open = nav.classList.toggle("open"); toggle.setAttribute("aria-expanded", open); }); }
+    })();
+  </script>
+</body>
+</html>
