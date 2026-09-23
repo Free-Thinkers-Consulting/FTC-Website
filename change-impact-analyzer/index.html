@@ -39,9 +39,7 @@
           <div class="dropdown">
             <a href="/products/#diy-salesforce">DIY Salesforce</a>
             <a href="/ai-readiness/">AI Readiness</a>
-            <a href="/revenue-leakage-detector/">Revenue Leakage Detector</a>
-            <a href="/data-quality/">Data Quality Intelligence Platform</a>
-            <a href="/change-impact-analyzer/">Change Impact Analyzer</a>
+            <a href="/revenue-leakage-detector/">Revenue Leakage Audit</a>
             <a href="/quoting-proposal-engine/">Quoting &amp; Proposal Engine</a>
             <a href="/salesforce-audit/">Salesforce Audit</a>
             <a href="/scorecard/">Org Health Scorecard (Free)</a>
@@ -78,7 +76,7 @@
       <h1>Know what your Salesforce change will break before you make it.</h1>
       <p class="lead">Map dependencies, identify downstream risk, and understand what needs to be tested before your next Salesforce change reaches production. A field may feed a Flow. That Flow may trigger Apex. Apex may update another system. The analyzer traces those relationships so you see the blast radius before it becomes a production problem.</p>
       <div style="margin-top:30px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
-        <a class="btn btn-primary" href="/contact/?product=Change%20Impact%20Analyzer">Speak to an expert</a>
+        <a class="btn btn-primary" href="#early-access">Get early access</a>
       </div>
       <p style="margin-top:18px; font-size:1rem;">Make Salesforce changes with evidence instead of assumptions.</p>
     </div>
@@ -212,12 +210,73 @@
     </div>
   </section>
 
-  <!-- 8. FINAL CTA -->
-  <section class="cta-band">
+  <!-- 8. EARLY ACCESS SIGN-UP -->
+  <section class="section soft" id="early-access">
     <div class="container">
-      <h2>Before you change it, know what it touches.</h2>
-      <a class="btn btn-light" href="/contact/?product=Change%20Impact%20Analyzer">Speak to an expert</a>
-      <p style="margin-top:22px;">Understand the dependencies, risk, and testing behind your next Salesforce change.</p>
+      <p class="eyebrow" style="text-align:center;">Early Access</p>
+      <h2 class="section-title">Before you change it, know what it touches.</h2>
+      <p class="section-sub">The Change Impact Analyzer is in early access. We are onboarding a limited number of orgs at a time so each one gets a proper setup. Put your name down and we will reach out when the next group opens.</p>
+      <div class="contact-form" style="max-width:680px; margin:0 auto;">
+        <!-- ============================================================
+             SALESFORCE WEB-TO-LEAD FORM (early access)
+             The action, oid, retURL and field names must stay unchanged so
+             leads keep syncing. Product_of_Interest__c is hard-coded to this
+             page's product and must match the Salesforce picklist value
+             exactly. data-lead-guard + /js/lead-form-guard.js are required:
+             Web-to-Lead enforces reCAPTCHA org-wide, and without them these
+             leads are silently dropped.
+             ============================================================ -->
+        <form
+          action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Da500000I9TVx"
+          method="POST"
+          id="ftcEarlyAccessForm"
+          class="sf-form"
+          data-lead-guard>
+          <input type="hidden" name="oid" value="00Da500000I9TVx">
+          <input type="hidden" name="retURL" value="https://freethinkersconsulting.com/thank-you/">
+          <input type="hidden" name="assign_using_active_assignment_rule" value="true">
+          <input type="hidden" name="lead_source" value="Web">
+          <input type="hidden" name="Product_of_Interest__c" value="Change Impact Analyzer">
+
+          <div class="sf-row">
+            <div class="sf-field">
+              <label for="first_name">First Name *</label>
+              <input id="first_name" name="first_name" type="text" required>
+            </div>
+            <div class="sf-field">
+              <label for="last_name">Last Name *</label>
+              <input id="last_name" name="last_name" type="text" required>
+            </div>
+          </div>
+
+          <div class="sf-row">
+            <div class="sf-field">
+              <label for="email">Work Email *</label>
+              <input id="email" name="email" type="email" required>
+            </div>
+            <div class="sf-field">
+              <label for="company">Company Name *</label>
+              <input id="company" name="company" type="text" required>
+            </div>
+          </div>
+
+          <div class="sf-field">
+            <label for="Looking_For_Details__c">What change are you most nervous about shipping? (optional)</label>
+            <textarea id="Looking_For_Details__c" name="Looking_For_Details__c" rows="4"></textarea>
+          </div>
+
+          <button id="submitButton" type="submit" class="sf-submit">Sign Me Up For Early Access</button>
+
+          <div id="loadingSpinner" class="sf-spinner" style="display:none;">
+            <div class="sf-spinner-ring"></div>
+            <p>Sending&#8230;</p>
+          </div>
+        </form>
+      </div>
+      <p style="text-align:center; margin-top:22px; font-size:.95rem;">No spam, and no sales sequence. One email when your spot is ready.</p>
+      <p style="text-align:center; margin-top:10px; font-size:.95rem;">
+        Rather talk it through first? <a href="/contact/?product=Change%20Impact%20Analyzer">Speak to an expert</a>.
+      </p>
     </div>
   </section>
 
@@ -257,6 +316,8 @@
     </div>
   </footer>
 
+  <!-- Loaded before the submit handler below so a blocked spam check stops it running. -->
+  <script src="/js/lead-form-guard.js?v=1"></script>
   <script>
     (function () {
       document.getElementById("year").textContent = new Date().getFullYear();
@@ -266,6 +327,16 @@
         toggle.addEventListener("click", function () {
           var open = nav.classList.toggle("open");
           toggle.setAttribute("aria-expanded", open);
+        });
+      }
+
+      var eaForm = document.getElementById("ftcEarlyAccessForm");
+      if (eaForm) {
+        eaForm.addEventListener("submit", function () {
+          var btn = document.getElementById("submitButton");
+          var spinner = document.getElementById("loadingSpinner");
+          if (btn) { btn.style.opacity = ".6"; btn.style.pointerEvents = "none"; btn.textContent = "Submitting\u2026"; }
+          if (spinner) spinner.style.display = "block";
         });
       }
     })();
