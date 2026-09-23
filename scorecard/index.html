@@ -430,21 +430,69 @@ footer{
   </div>
 </section>
 
-<footer>© Free Thinkers Consulting · The CLARITY Method</footer>
+<footer>© Free Thinkers Consulting</footer>
 
 <script src="/js/lead-form-guard.js?v=1"></script>
 <script>
-/* ================= CONFIG: EDIT THESE 3 ================= */
+/* ================= CONFIG ================= */
 const CONFIG = {
   sf: {
     endpoint:  "https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8",
     oid:       "00Da500000I9TVx",
     retURL:    "https://freethinkersconsulting.com/thank-you/",
-    leadSource:"Org Health Scorecard"
+    leadSource:"Org Health Scorecard"     // keep stable; add once as a Lead Source picklist value
   },
-  auditUrl:  "https://calendly.com/olivia-freethinkersconsulting/30-minute-meeting",  // audit intro call
-  clarityUrl:"https://start.freethinkersconsulting.com"   // CLARITY Method page
+  auditUrl:  "https://calendly.com/olivia-freethinkersconsulting/30-minute-meeting",  // PRIMARY CTA — audit intro call, same for every product
+
+  /* ---- SECONDARY CTA, chosen by the ad's ?src= tag ----------------------
+     Point each ad at /scorecard/?src=<key>. The key below decides which
+     product the secondary CTA promotes. An unknown or missing ?src falls
+     back to defaultSrc, but the raw value is always written onto the Lead
+     so you can tell which ad produced it. Add a product by copying a block;
+     {link} is replaced with a link to that product. */
+  defaultSrc: "clarity",
+  products: {
+    "clarity": {
+      name: "CLARITY Method",
+      url:  "https://start.freethinkersconsulting.com",
+      pitch:"{link} is the self-paced framework we use on enterprise builds — fix it yourself, no agency required."
+    },
+    "revenue-leakage": {
+      name: "Revenue Leakage Detector",
+      url:  "/revenue-leakage-detector/",
+      pitch:"{link} surfaces the lost and at-risk revenue hiding in your Salesforce data — see where you're leaking before it costs you."
+    },
+    "ai-readiness": {
+      name: "AI Readiness",
+      url:  "/ai-readiness/",
+      pitch:"{link} checks whether your data, security, and processes are ready for AI — and hands you a roadmap to deploy it safely."
+    },
+    "data-quality": {
+      name: "Data Quality Intelligence Platform",
+      url:  "/data-quality/",
+      pitch:"{link} continuously scores and cleans your Salesforce data so your reports, automations, and AI can be trusted."
+    },
+    "change-impact": {
+      name: "Change Impact Analyzer",
+      url:  "/change-impact-analyzer/",
+      pitch:"{link} maps every dependency across flows, fields, and automations so you can ship changes without breaking production."
+    },
+    "quoting": {
+      name: "Quoting & Proposal Engine",
+      url:  "/quoting-proposal-engine/",
+      pitch:"{link} generates accurate quotes and on-brand proposals straight from Salesforce."
+    },
+    "diy": {
+      name: "DIY Salesforce",
+      url:  "/products/#diy-salesforce",
+      pitch:"{link} gives your team the templates, playbooks, and expert checkpoints to build the right way — without a full engagement."
+    }
+  }
 };
+
+/* Resolve the product for this visit from ?src= (raw value kept for tracking). */
+const RAW_SRC = (new URLSearchParams(location.search).get("src") || "").trim().toLowerCase();
+const PRODUCT = CONFIG.products[RAW_SRC] || CONFIG.products[CONFIG.defaultSrc];
 /* ========================================================= */
 
 const SECTIONS = ["Ownership","Data you can trust","Adoption","Technical debt & risk","Money & honesty"];
@@ -565,25 +613,25 @@ const VERDICTS = [
   ctaHead:"Keep it this way.",
   ctaBody:"Most orgs don't stay at this score without someone watching. When you're ready for a second set of eyes, or a plan to keep it clean as you scale, we should talk.",
   ctaLabel:"Book a working session", cta:"audit",
-  ctaAlt:"Or steal our playbook: the CLARITY Method, the framework we use on enterprise builds."},
+  altIntro:"Not ready to talk yet? "},
  {min:55,label:"Creaking",color:"var(--amber)",
   copy:"It works today, and it's <b>compounding debt</b> underneath. This is the cheapest moment you will ever have to fix it: every quarter you wait, the cleanup bill grows and the workarounds calcify into \u201chow we do things.\u201d",
   ctaHead:"Fix it while it's still cheap.",
   ctaBody:"You don't need a rescue. You need a punch list and a straight answer on what matters. The full audit gives you exactly that: findings, priorities, and what it costs to ignore each one.",
   ctaLabel:"Get the full audit", cta:"audit",
-  ctaAlt:"Prefer to fix it yourself? The CLARITY Method is the exact framework we use, no agency required."},
+  altIntro:"Want to dig in yourself first? "},
  {min:30,label:"At risk",color:"var(--red)",
   copy:"This is the classic profile of an org that was <b>built fast and inherited by nobody</b>: homegrown, or handed off by a partner who's long gone. You're paying enterprise money for spreadsheet-level trust, and the people who could explain it are one resignation away from gone.",
   ctaHead:"You already suspected this. Now you have it in writing.",
   ctaBody:"The full audit goes where a questionnaire can't: inside the org itself. We inventory what's actually built, what's actually used, what's dangerous, and hand you a prioritized fix-first roadmap.",
   ctaLabel:"Book the full audit", cta:"audit",
-  ctaAlt:"Budget tight? Start with the CLARITY Method and fix it yourself, in the right order."},
+  altIntro:"On a tight budget? "},
  {min:0,label:"On fire",color:"var(--red)",
   copy:"You knew before you clicked. This score usually means Salesforce has become a <b>tax everyone resents</b>: untrusted data, unknown automations, and money going out the door for a system working against you. The good news: we've seen worse, and it's recoverable.",
   ctaHead:"Stop paying for a system that's working against you.",
   ctaBody:"Before you rip anything out or sign with another agency, get an honest map of what you have. The audit tells you what to kill, what to keep, and what order to fix it in, from people with no incentive to sell you a rebuild.",
   ctaLabel:"Book the rescue audit", cta:"audit",
-  ctaAlt:"Or start with the CLARITY Method and take back control yourself."}
+  altIntro:"Want to start smaller? "}
 ];
 
 /* ---------------- state ---------------- */
@@ -674,6 +722,7 @@ $("leadForm").addEventListener("submit",async e=>{
   const desc = [
     "ORG HEALTH SCORECARD",
     "Score: " + r.total + "/100  (" + r.verdict.label + ")",
+    "Ad source: " + (RAW_SRC || "(none)") + "  → " + PRODUCT.name,
     "",
     ...SECTIONS.map((sec,i)=> sec + ": " + r.sec[i] + "/20"),
     "",
@@ -746,7 +795,8 @@ function renderResults(r){
   const btn=$("ctaBtn");
   btn.textContent=v.ctaLabel+" →";
   btn.href=CONFIG.auditUrl;
-  $("ctaAlt").innerHTML=v.ctaAlt.replace("CLARITY Method",`<a href="${CONFIG.clarityUrl}" target="_blank" rel="noopener">CLARITY Method</a>`);
+  const plink = `<a href="${PRODUCT.url}" target="_blank" rel="noopener">${PRODUCT.name}</a>`;
+  $("ctaAlt").innerHTML = v.altIntro + PRODUCT.pitch.replace("{link}", plink);
 }
 
 $("retakeBtn").addEventListener("click",()=>{
