@@ -53,10 +53,15 @@ The contact form is the real Salesforce web-to-lead embed (on the homepage,
 
 ## Publishing a blog post
 
-1. Copy `blog/15-signs-…/index.html` to `blog/<your-slug>/index.html`.
+1. Copy the newest post's `index.html` to `<your-slug>/index.html` (posts live
+   at the site root, not under `/blog/`).
 2. Update the `<title>`, meta tags, the `.article-hero` (date + `<h1>`), and the
-   `.article-body` content.
-3. Add a `<a class="blog-card">` for it to the grid in `blog/index.html`.
+   `.article-body` content. Put the featured image at `/assets/blog/<your-slug>.jpg`.
+3. Run `python3 scripts/sync-blog-og.py`. It sets the featured image as the
+   post's share image (og:image / twitter:card) so Facebook, LinkedIn etc.
+   show it. `--check` lists any post that's out of date.
+4. Add a `<a class="blog-card">` for it to the grid in `blog/index.html`, and a
+   `<url>` entry to `sitemap.xml`.
 
 ## Local preview
 
