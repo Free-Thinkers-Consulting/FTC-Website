@@ -603,3 +603,15 @@ header, section, footer, .container { position: relative; z-index: 1; }
   .footer-grid { grid-template-columns: 1fr; }
   .card-grid.cols-2, .card-grid.cols-3, .case-grid, .blog-grid { grid-template-columns: 1fr; }
 }
+
+/* Newsletter signup band (Kit form) at top of footer */
+.footer-news { display: grid; grid-template-columns: 1.1fr 1fr; gap: 36px; align-items: center; padding: 36px 40px; margin-bottom: 56px; background: var(--surface); border: 1px solid var(--border); border-radius: 20px; }
+.footer-news-label { font-family: var(--font); font-size: .75rem; font-weight: 700; letter-spacing: 3px; color: var(--purple-text); }
+.footer-news h3 { font-family: var(--font); color: var(--text-1); font-size: 1.7rem; font-weight: 800; letter-spacing: -0.03em; margin: 10px 0 8px; }
+.footer-news p { font-family: var(--font); color: var(--text-3); font-size: .98rem; margin: 0; max-width: 42ch; }
+.footer-news-form { display: flex; flex-wrap: wrap; gap: 10px; }
+.footer-news-form input { flex: 1 1 160px; min-width: 0; padding: 14px 18px; border-radius: 40px; border: 1px solid var(--border-hi); background: var(--bg); color: var(--text-1); font-family: var(--font); font-size: .96rem; }
+.footer-news-form input::placeholder { color: var(--text-3); }
+.footer-news-form input:focus { outline: none; border-color: var(--purple); }
+.footer-news-form .btn { flex: 1 1 100%; justify-content: center; border: 0; cursor: pointer; }
+@media (max-width: 940px) { .footer-news { grid-template-columns: 1fr; padding: 28px 24px; } }
