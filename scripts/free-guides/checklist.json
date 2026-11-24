@@ -1,0 +1,94 @@
+{
+  "slug": "checklist",
+  "keyword": "CHECKLIST",
+  "order": 1,
+  "tag": "CRM + AI",
+  "title_main": "The 30-Day CRM & AI Build",
+  "title_accent": "Checklist",
+  "card_title": "The 30-Day CRM & AI Build Checklist",
+  "card_desc": "One task a day for 30 days. Set up your CRM, automate the work you repeat, then bring in AI.",
+  "meta_title": "The 30-Day CRM & AI Build Checklist (Free) | Olivia Porter",
+  "meta_description": "A free 30-day checklist for B2B owners with a small team: set up your CRM so it tells the truth, automate the work you repeat, then bring in AI. One task a day.",
+  "sub": "For B2B owners with a small team. One task a day: set up your CRM, automate the work you repeat, then bring in AI.",
+  "checklist": true,
+  "intro": [
+    "You started your business for freedom. This is how you start getting your time back: set up your CRM so it tells the truth, automate the work you repeat, then bring in AI. In that order.",
+    "AI can't fix a messy system. It just repeats the mess faster."
+  ],
+  "before": {
+    "label": "Two things before you start",
+    "items": [
+      ["Do the days in order.", "Most owners skip week 1. Please don't. You can only get your time back if you know where it's going."],
+      ["Check off each day as you go.", "Your progress saves in this browser, so you can come back tomorrow and pick up where you left off."]
+    ]
+  },
+  "sections": [
+    {
+      "label": "Week 1 · Days 1 to 7",
+      "title": "Find where your time goes",
+      "steps": [
+        {"title": "Start a time log", "text": "Write down where every 15 minutes of your day goes. A spreadsheet or a notebook is fine. Keep it going all week."},
+        {"title": "List what depends on you", "text": "Write down everything that waits on you: approvals, sales decisions, customer questions, admin work."},
+        {"title": "Pick one source of truth", "text": "Decide which system holds your customers, deals, and follow-ups. That's your CRM. Not your inbox, not a spreadsheet."},
+        {"title": "Write your CRM's three jobs", "text": "Write down the three things your CRM actually needs to do. For example: track leads, manage follow-ups, and show which deals are about to close. Start there."},
+        {"title": "Get the structure right", "text": "A contact is a person. A company is where they work. A deal is money in motion, with a stage, an amount, and a close date. Don't put deal info on the contact."},
+        {"title": "Make four fields required", "text": "On new records, require name and best contact, lead source, stage, and owner. Only add a new field when you'll filter or report on it."},
+        {"title": "Review your time log", "text": "Circle the task you repeat the most. Sort the rest into three lists: only you can do it, your team could do it, a tool could do it."}
+      ]
+    },
+    {
+      "label": "Week 2 · Days 8 to 14",
+      "title": "Make your CRM tell the truth",
+      "steps": [
+        {"title": "Name stages after buyer actions", "text": "Name each pipeline stage after something the buyer did. \"Interested\" is a feeling. \"Demo booked\" is a fact. Write the rule for moving from one stage to the next. A simple start: New lead, Qualified, Proposal sent, Negotiation, Closed."},
+        {"title": "Give every deal a next step", "text": "Filter your open deals with no next step. Give each one a step and a date. Close the ones you can't."},
+        {"title": "Turn report fields into dropdowns", "text": "Make the fields you report on into dropdowns: lead source, industry, company size, lost reason. Keep one notes field for everything else. Notes are for the story. Fields are for the facts."},
+        {"title": "Make every follow-up a task", "text": "Every follow-up becomes a task in your CRM with a due date. Check one task list every morning."},
+        {"title": "Connect your email", "text": "Connect your email to your CRM, or at least log the important conversations there. If it matters to revenue, it lives in the CRM."},
+        {"title": "Save your top email templates", "text": "Find the emails you type every week. Write your best version once and save it as a CRM template with merge fields for first name and company."},
+        {"title": "Ask your team what they need", "text": "Ask the people who use the CRM every day what would make their job easier. Hide the fields nobody uses. Build what they ask for first."}
+      ]
+    },
+    {
+      "label": "Week 3 · Days 15 to 21",
+      "title": "Automate the work you repeat",
+      "steps": [
+        {"title": "List your copy-paste work", "text": "Look at everything your team copies and pastes from one tool to another. List each one. Those systems should be connected."},
+        {"title": "Build your first automation", "text": "Build the one automation that saves you the most time. Pick from these five:", "list": ["Capture new leads in your CRM automatically", "Create a follow-up task when a new inquiry comes in", "Create the project and onboarding checklist when a deal closes", "Automate recurring invoices and payment reminders", "Send yourself a daily summary of important business activity"]},
+        {"title": "Test it with real records", "text": "Run it on real records. Fix what breaks before you add anything else."},
+        {"title": "Build the next one", "text": "Build the next automation on your list."},
+        {"title": "Test that one too", "text": "Test it the same way. One at a time, every time."},
+        {"title": "Sort automation vs. AI", "text": "Sort what's left. Use regular automation when data just needs to move from one place to another. Save AI for when information needs to be summarized, sorted, or interpreted."},
+        {"title": "Count the hours you got back", "text": "Write down the hours you got back this week. Compare it to your week 1 time log."}
+      ]
+    },
+    {
+      "label": "Week 4 · Days 22 to 28",
+      "title": "Bring in AI",
+      "steps": [
+        {"title": "Pick one AI tool", "text": "Pick one AI tool and stick with it for a month. ChatGPT, Claude, Gemini, whichever you already use."},
+        {"title": "Write your never-paste list", "text": "Passwords and logins. Bank, card, and tax ID numbers. Client data you're not authorized to share. Employee HR details. If you wouldn't put it on a billboard, don't put it in your chat."},
+        {"title": "Teach it your business", "text": "Tell it about your business before you ask it anything. Give it six things:", "list": ["Who your customer is", "What you sell and what it costs", "Three emails you wrote yourself", "Your process, step by step", "The questions customers always ask, with your answers", "What you never want it to say"]},
+        {"title": "Save three weekly prompts", "text": "Write prompts for three tasks you do every week and save them. Add this line to each one: \"Ask me questions before you answer.\""},
+        {"title": "Connect AI to your tools", "text": "Connect your AI to your email, calendar, and CRM. Only share customer data with a tool your company has approved for it. Otherwise strip out names and sensitive info first."},
+        {"title": "Hand it one real task", "text": "Paste in messy call notes and use the prompt below. Check the work before you put it in your CRM.", "prompt": "Here are my notes from a sales call. Give me:\n1. A 3-line summary\n2. The customer's main problem\n3. The next step, with a date\n4. Any risks to the deal\n\nAsk me questions before you answer.\n\n[paste your notes here]"},
+        {"title": "Triage your inbox", "text": "Sort your inbox into three groups: needs a decision from you, can be delegated, can be handled by an automation. Let AI summarize and draft replies, with the right privacy controls."}
+      ]
+    },
+    {
+      "label": "Days 29 and 30",
+      "title": "Protect the time you got back",
+      "steps": [
+        {"title": "Build one morning dashboard", "text": "Build one dashboard you check every morning:", "list": ["New leads", "Leads that still need follow-up", "Deals expected to close", "Overdue client work", "Invoices that need attention"]},
+        {"title": "Block the time you got back", "text": "Put the hours you got back on your calendar. More time doesn't mean more work. Then ask: if I stepped away for 7 days, would leads still get followed up and deals still move forward? Whatever stops is next month's list."}
+      ]
+    }
+  ],
+  "closing": "That's 30 days. If you did them in order, your CRM tells the truth, the repeat work runs itself, and AI is working from real data instead of guesses.",
+  "offer": {
+    "label": "The CLARITY Method",
+    "headline": "Want me to walk you through all 30 days?",
+    "body": "This checklist is the map. CLARITY is the course that builds it with you: design your CRM first, then let AI (Claude or ChatGPT) do the clicking.",
+    "card_headline": "Want help with all 30 days?"
+  }
+}

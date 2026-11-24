@@ -1,0 +1,18 @@
+{
+  "_note": "Shared settings for every /free/ page. Change the offer here, then run: python3 scripts/build-free-pages.py",
+  "author": "Olivia Porter",
+  "instagram": "https://www.instagram.com/thefreedom_architect/",
+  "tiktok": "https://www.tiktok.com/@thefreedom_architect",
+  "offer": {
+    "checkout_url": "https://start.freethinkersconsulting.com/crm/join/5bia9",
+    "price": "$499",
+    "list_price": "$997",
+    "price_note": "Founding price",
+    "guarantee": "30-day guarantee",
+    "button": "Get CLARITY for $499",
+    "bar_text": "CLARITY: the 30-day CRM and AI build course. Founding price $499.",
+    "bar_button": "Get it",
+    "popup_delay_seconds": 25,
+    "popup_scroll_percent": 35
+  }
+}

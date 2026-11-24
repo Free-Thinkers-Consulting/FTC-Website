@@ -1,0 +1,261 @@
+/* ============================================================
+   Free guides (/free/ and /free/<slug>/)
+   Loaded after styles.css. Uses the same tokens.
+   ============================================================ */
+
+/* Offer bar at the very top */
+.promo-bar {
+  background: var(--grad);
+  color: #fff;
+  text-align: center;
+  padding: 12px 20px;
+  font-size: .9rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  display: flex; gap: 14px; align-items: center; justify-content: center; flex-wrap: wrap;
+}
+.promo-bar a.promo-btn {
+  background: #fff; color: #1D1B2E; border-radius: 6px;
+  padding: 7px 14px; font-size: .82rem; letter-spacing: .06em;
+  text-decoration: none; white-space: nowrap;
+  box-shadow: 3px 3px 0 rgba(0,0,0,.35);
+}
+.promo-bar a.promo-btn:hover { transform: translateY(-1px); }
+
+/* Guide hero */
+.guide-hero {
+  position: relative; overflow: hidden;
+  background:
+    radial-gradient(700px 360px at 85% 10%, rgba(255,255,255,.14), transparent 60%),
+    var(--grad);
+  color: #fff; text-align: center;
+  padding: 64px 0 72px;
+}
+.guide-hero::after {
+  content: ""; position: absolute; right: -90px; bottom: -150px;
+  width: 340px; height: 340px; border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.25); pointer-events: none;
+}
+.guide-back {
+  display: inline-block; color: #fff; text-decoration: none;
+  font-size: .82rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase;
+  margin-bottom: 28px;
+}
+.guide-back:hover { opacity: .85; color: #fff; }
+.guide-byline {
+  font-size: .78rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
+  color: rgba(255,255,255,.75); margin: 0 0 26px;
+  display: flex; gap: 8px 16px; justify-content: center; flex-wrap: wrap;
+}
+.guide-byline strong { color: #fff; }
+.guide-byline a { color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.6); }
+.guide-hero h1 {
+  color: #fff; text-transform: uppercase; font-weight: 800;
+  font-size: clamp(2.6rem, 8vw, 5rem); line-height: .98; letter-spacing: -0.03em;
+  max-width: 14ch; margin: 0 auto 10px;
+}
+.guide-hero .accent {
+  display: block; font-style: italic; font-weight: 500; text-transform: none;
+  font-size: clamp(1.8rem, 5vw, 3rem); letter-spacing: -0.01em; margin: 6px 0 22px;
+}
+.guide-hero .guide-sub {
+  color: rgba(255,255,255,.9); font-size: 1.2rem; max-width: 46ch; margin: 0 auto; line-height: 1.55;
+}
+
+/* Guide body */
+.guide-body { max-width: 780px; margin: 0 auto; padding: 56px 28px 24px; }
+.guide-body p { font-size: 1.12rem; line-height: 1.7; }
+.guide-body a { color: var(--purple-text); }
+
+.callout {
+  background: var(--surface); border: 1px solid var(--border);
+  border-left: 4px solid var(--purple); border-radius: 12px;
+  padding: 26px 28px; margin: 32px 0;
+}
+.callout-label {
+  font-size: .78rem; font-weight: 800; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--purple-text); margin: 0 0 14px;
+}
+.callout ol { margin: 0; padding-left: 1.2em; }
+.callout li { margin: 0 0 10px; font-size: 1.08rem; line-height: 1.6; }
+.callout li:last-child { margin-bottom: 0; }
+.callout li strong { color: var(--text-1); }
+
+/* Progress */
+.progress {
+  position: sticky; top: var(--hdr-h, 92px); z-index: 90;
+  background: rgba(11,11,20,.92); backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 0;
+}
+.progress-inner { max-width: 780px; margin: 0 auto; padding: 0 28px; display: flex; align-items: center; gap: 16px; }
+.progress-track { flex: 1; height: 8px; background: var(--surface); border-radius: 99px; overflow: hidden; border: 1px solid var(--border); }
+.progress-fill { height: 100%; width: 0; background: var(--grad-soft); transition: width .3s ease; }
+.progress-text { font-size: .9rem; font-weight: 700; color: var(--text-1); white-space: nowrap; }
+
+/* Sections and step cards */
+.guide-section { margin: 56px 0 0; }
+.guide-section-label {
+  font-size: .78rem; font-weight: 800; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--purple-text); margin: 0 0 6px;
+}
+.guide-section h2 { font-size: clamp(1.7rem, 3.2vw, 2.2rem); margin: 0 0 22px; font-weight: 800; letter-spacing: -0.02em; }
+
+.step-card {
+  position: relative; scroll-margin-top: 170px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-left: 4px solid var(--purple); border-radius: 12px;
+  padding: 24px 26px 22px; margin: 0 0 16px;
+  transition: border-color .2s ease, opacity .2s ease;
+}
+.day-num { font-size: 1.6rem; font-weight: 800; color: var(--purple-text); line-height: 1; margin: 0 0 8px; letter-spacing: -0.02em; }
+.step-card h3 { font-size: 1.15rem; text-transform: uppercase; letter-spacing: .04em; font-weight: 800; margin: 0 0 10px; }
+.step-card p { margin: 0; font-size: 1.06rem; line-height: 1.65; }
+.step-card ul { margin: 10px 0 0; padding-left: 1.2em; }
+.step-card li { font-size: 1.04rem; line-height: 1.6; margin: 0 0 6px; }
+
+.step-done {
+  margin-top: 16px; display: inline-flex; align-items: center; gap: 10px;
+  font-size: .95rem; font-weight: 700; color: var(--text-1); cursor: pointer; user-select: none;
+}
+.step-done input { width: 22px; height: 22px; accent-color: var(--purple); cursor: pointer; }
+.step-card.is-done { border-left-color: #34d399; }
+.step-card.is-done .day-num { color: #34d399; }
+
+/* Copy-able prompt */
+.copy-block { margin-top: 16px; border: 1px solid var(--border-hi); border-radius: 10px; overflow: hidden; }
+.copy-head { display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,.04); padding: 8px 14px; font-size: .78rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--text-3); }
+.copy-btn { background: var(--purple); color: #fff; border: 0; border-radius: 6px; padding: 6px 12px; font: inherit; font-size: .78rem; cursor: pointer; letter-spacing: .08em; }
+.copy-text { margin: 0; padding: 16px; white-space: pre-wrap; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .92rem; line-height: 1.6; color: var(--text-2); background: #0f0e18; }
+
+/* End of guide */
+.guide-closing { margin: 48px 0 0; font-size: 1.15rem; }
+.guide-sign { margin: 8px 0 0; color: var(--text-3); font-size: 1rem; }
+
+/* Course card (end of page) */
+.offer-card {
+  margin: 56px auto 72px; max-width: 780px;
+  background: var(--grad); border-radius: 16px; padding: 40px 36px; color: #fff; text-align: center;
+}
+.offer-card .eyebrow { color: rgba(255,255,255,.8); margin-bottom: 10px; }
+.offer-card h2 { color: #fff; font-size: clamp(1.7rem, 3.4vw, 2.3rem); margin: 0 0 12px; }
+.offer-card p { color: rgba(255,255,255,.92); font-size: 1.1rem; max-width: 52ch; margin: 0 auto 24px; }
+.offer-card .offer-price { color: #fff; }
+.offer-card .offer-price s { color: rgba(255,255,255,.7); }
+
+/* Course pop-up */
+.offer-modal { position: fixed; inset: 0; z-index: 200; display: none; align-items: center; justify-content: center; padding: 20px; }
+.offer-modal.open { display: flex; }
+.offer-backdrop { position: absolute; inset: 0; background: rgba(5,5,12,.72); }
+.offer-box {
+  position: relative; max-width: 520px; width: 100%;
+  background: #fff; color: #1D1B2E; border-radius: 18px; padding: 36px 32px 24px;
+  box-shadow: 0 30px 80px rgba(0,0,0,.6);
+  animation: offerIn .25s ease-out;
+}
+@keyframes offerIn { from { transform: translateY(14px); opacity: 0; } to { transform: none; opacity: 1; } }
+.offer-close { position: absolute; top: 12px; right: 14px; background: none; border: 0; font-size: 1.8rem; line-height: 1; color: #555; cursor: pointer; padding: 6px; }
+.offer-label { font-size: .78rem; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; color: var(--purple); margin: 0 0 10px; }
+.offer-box h2 { color: #1D1B2E; text-transform: uppercase; font-size: clamp(1.6rem, 5vw, 2.1rem); line-height: 1.05; margin: 0 0 14px; letter-spacing: -0.02em; }
+.offer-box p { color: #3b3950; font-size: 1.06rem; line-height: 1.6; margin: 0 0 12px; }
+.offer-price { font-weight: 800; color: #1D1B2E; }
+.offer-price s { color: #8a879c; font-weight: 600; margin-right: 6px; }
+.offer-cta {
+  display: block; text-align: center; margin: 20px 0 10px;
+  background: var(--grad-soft); color: #fff; text-decoration: none;
+  border-radius: 10px; padding: 16px 20px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+}
+.offer-cta:hover { color: #fff; filter: brightness(1.08); }
+.offer-later { display: block; margin: 0 auto; background: none; border: 0; color: #6b6880; font: inherit; font-size: .98rem; cursor: pointer; padding: 8px; }
+
+/* Hub page */
+.free-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; margin: 0 0 80px; }
+.free-card {
+  display: flex; flex-direction: column; gap: 10px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+  padding: 26px; text-decoration: none; color: var(--text-2);
+  transition: transform .2s ease, border-color .2s ease;
+}
+.free-card:hover { transform: translateY(-3px); border-color: var(--purple); color: var(--text-2); }
+.free-card .free-tag { font-size: .74rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; color: var(--purple-text); }
+.free-card h3 { font-size: 1.3rem; margin: 0; color: var(--text-1); }
+.free-card p { margin: 0; font-size: 1.02rem; line-height: 1.55; flex: 1; }
+.free-card .free-go { font-weight: 800; color: var(--purple-text); }
+
+@media (max-width: 680px) {
+  .guide-body { padding: 40px 22px 16px; }
+  .progress-inner { padding: 0 22px; }
+  .step-card { padding: 20px 20px 18px; }
+  .offer-card { margin: 40px 22px 56px; padding: 32px 22px; }
+  .offer-box { padding: 32px 22px 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .offer-box { animation: none; }
+  .progress-fill, .step-card, .free-card { transition: none; }
+}
+@media print {
+  .promo-bar, .progress, .offer-modal, .offer-card, .site-header, .site-footer { display: none !important; }
+}
+
+/* ============================================================
+   Style A (picked by Olivia, Nov 24 2026). Loaded on body.free-page.
+   ============================================================ */
+/* ---------- Light theme for /free/ pages: white header, white body ---------- */
+body.free-page { background: var(--sk-bg); }
+.free-page main, .free-page .site-header, .free-page .offer-modal, .free-page .progress {
+  --surface: var(--sk-card); --border: var(--sk-line); --border-hi: var(--sk-line);
+  --text-1: var(--sk-ink); --text-2: var(--sk-body); --text-3: var(--sk-muted);
+  --purple: var(--sk-accent); --purple-text: var(--sk-accent);
+}
+.free-page main, .free-page .offer-modal { color: var(--sk-body); }
+.free-page .callout li { color: var(--sk-body); }
+.free-page .site-header { background: rgba(255,255,255,.94); border-bottom: 1px solid var(--sk-line); }
+.free-page .main-nav a { color: var(--sk-body); }
+.free-page .main-nav a:hover { color: var(--sk-ink); }
+.free-page .main-nav a.btn-nav { color: #fff; background: var(--sk-accent); box-shadow: none; }
+.free-page .dropdown { background: #fff; border-color: var(--sk-line); box-shadow: 0 18px 40px rgba(20,16,50,.14); }
+.free-page .dropdown a:hover { background: var(--sk-soft); color: var(--sk-ink); }
+.free-page .nav-toggle span { background: var(--sk-ink); }
+@media (max-width: 680px) { .free-page .main-nav { background: rgba(255,255,255,.98); } .free-page .dropdown a { color: var(--sk-muted); } }
+.free-page .progress { background: rgba(255,255,255,.95); border-bottom: 1px solid var(--sk-line); }
+.free-page .progress-track { background: var(--sk-soft); border-color: var(--sk-line); }
+.free-page .progress-fill { background: var(--sk-accent); }
+.free-page .guide-body p, .free-page .step-card p, .free-page .step-card li { color: var(--sk-body); }
+.free-page .copy-text { background: var(--sk-ink); color: #fff; }
+.free-page .copy-head { background: var(--sk-soft); color: var(--sk-muted); }
+.free-page .copy-btn { background: var(--sk-accent); }
+.free-page .step-done input { accent-color: var(--sk-accent); }
+.free-page .step-card.is-done { border-color: var(--sk-line); border-left-color: #12a150; }
+.free-page .step-card.is-done .day-num { color: #12a150; }
+
+/* ---------- Bold style (Anton headlines, flat purple, hard shadows) ---------- */
+.free-page {
+  --sk-bg: #ffffff; --sk-card: #ffffff; --sk-soft: #EFEBFF; --sk-line: #15122B;
+  --sk-ink: #15122B; --sk-body: #2F2B45; --sk-muted: #5E5A75; --sk-accent: #5039FF;
+}
+.free-page .site-header { border-bottom: 2px solid #15122B; }
+.free-page .promo-bar { background: #15122B; }
+.free-page .promo-bar a.promo-btn { background: #5039FF; color: #fff; box-shadow: 3px 3px 0 #fff; }
+.free-page .guide-hero { background: #5039FF; padding: 72px 0 84px; }
+.free-page .guide-hero::after { border: 0; background: #15122B; opacity: .14; width: 420px; height: 420px; right: -140px; bottom: -220px; }
+.free-page .guide-hero h1 { font-family: "Anton", Impact, sans-serif; font-weight: 400; letter-spacing: .005em; line-height: .95; font-size: clamp(3.2rem, 11vw, 6.6rem); max-width: 11ch; }
+.free-page .guide-hero .accent { font-family: "Instrument Serif", Georgia, serif; font-style: italic; font-weight: 400; font-size: clamp(2.4rem, 7vw, 4rem); margin: 4px 0 20px; }
+.free-page .guide-section h2, .free-page .step-card h3, .free-page .offer-box h2, .free-page .offer-card h2 {
+  font-family: "Anton", Impact, sans-serif; font-weight: 400; text-transform: uppercase; letter-spacing: .01em;
+}
+.free-page .guide-section h2 { font-size: clamp(2.2rem, 5vw, 3rem); }
+.free-page .step-card { border: 2px solid #15122B; border-left: 10px solid #5039FF; border-radius: 14px; }
+.free-page .step-card h3 { font-size: 1.7rem; line-height: 1.05; }
+.free-page .day-num { font-family: "Anton", Impact, sans-serif; font-weight: 400; font-size: 1.5rem; letter-spacing: .04em; text-transform: uppercase; }
+.free-page .callout { background: #EFEBFF; border: 2px solid #15122B; border-left: 10px solid #5039FF; }
+.free-page .offer-card { background: #5039FF; box-shadow: 10px 10px 0 #15122B; border-radius: 16px; }
+.free-page .offer-card h2 { font-size: clamp(2.2rem, 5vw, 3rem); }
+.free-page .offer-card .btn { box-shadow: 4px 4px 0 #15122B; border-radius: 10px; }
+.free-page .offer-box { border: 3px solid #15122B; box-shadow: 10px 10px 0 #5039FF; border-radius: 16px; }
+.free-page .offer-box h2 { font-size: clamp(2.2rem, 7vw, 2.8rem); line-height: 1; }
+.free-page .offer-cta { background: #5039FF; box-shadow: 4px 4px 0 #15122B; }
+
+.free-page .free-card { background: #fff; border: 2px solid #15122B; }
+.free-page .free-card:hover { border-color: #15122B; box-shadow: 6px 6px 0 #5039FF; }
+.free-page .free-card h3 { font-family: "Anton", Impact, sans-serif; font-weight: 400; text-transform: uppercase; letter-spacing: .01em; font-size: 1.7rem; line-height: 1.05; }
