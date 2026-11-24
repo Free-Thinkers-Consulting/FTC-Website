@@ -23,6 +23,8 @@ REF = (ROOT / "ai-readiness" / "index.html").read_text()
 CSS_VER = "16"
 FREE_CSS_VER = "4"
 BASE = "https://freethinkersconsulting.com"
+# Shared logomark share card (see /assets/og/); 2400x1260, crop-safe.
+OG_IMAGE = f"{BASE}/assets/og/ftc-logomark.png"
 
 
 def e(s):
@@ -62,6 +64,16 @@ def head(title, desc, path):
   <meta property="og:type" content="article" />
   <meta property="og:url" content="{url}" />
   <meta property="og:site_name" content="Free Thinkers Consulting" />
+  <meta property="og:image" content="{OG_IMAGE}" />
+  <meta property="og:image:secure_url" content="{OG_IMAGE}" />
+  <meta property="og:image:width" content="2400" />
+  <meta property="og:image:height" content="1260" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:alt" content="Free Thinkers Consulting, Salesforce Solutions" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{e(title)}" />
+  <meta name="twitter:description" content="{e(desc)}" />
+  <meta name="twitter:image" content="{OG_IMAGE}" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Anton&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet" />
