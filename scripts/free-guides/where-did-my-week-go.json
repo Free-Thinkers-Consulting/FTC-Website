@@ -6,13 +6,13 @@
   "title_main": "Where Did My",
   "title_accent": "Week go?",
   "card_title": "The “Where Did My Week Go?” Prompt",
-  "card_desc": "Paste in how you spent your week. AI sorts every task into delegate, automate or drop, and picks the first thing to hand off.",
+  "card_desc": "Track one week in 15-minute blocks. AI sorts every task into delegate, automate or drop, and picks the first thing to hand off.",
   "meta_title": "The “Where Did My Week Go?” Prompt (Free) | Olivia Porter",
-  "meta_description": "List how you spent your week, paste it into Claude or ChatGPT with this prompt, and get every task sorted into delegate, automate, or drop, plus the first thing to hand off.",
-  "sub": "Sort your week into delegate, automate or drop. Then hand one thing off.",
+  "meta_description": "Track one week in 15-minute blocks in a Google Sheet or Excel, paste it into Claude or ChatGPT with this prompt, and get every task sorted into delegate, automate, or drop, plus the first thing to hand off.",
+  "sub": "Track one week in 15-minute blocks. Sort it into delegate, automate or drop. Then hand one thing off.",
   "checklist": false,
   "intro": [
-    "Here's the prompt."
+    "Here's how to find out where your week really goes, and the prompts to fix it."
   ],
   "sections": [
     {
@@ -20,17 +20,26 @@
       "title": "From busy week to one hand-off",
       "steps": [
         {
-          "title": "Write down where your hours went",
-          "text": "A simple list of tasks and time is fine."
+          "title": "Track every 15 minutes for one week",
+          "text": "Open a new Google Sheet or Excel file and write down what you did every 15 minutes, every workday, for one full week. I know it sounds like a pain. It's worth it. It's the only way to see where your time really goes, not where you think it goes. Here's how to set it up:",
+          "list": [
+            "Make one tab for each workday.",
+            "Column A is the time. Type 8:00 and 8:15 in the first two rows, select both, and drag down to fill the rest of your day.",
+            "Column B is what you did, in a few words: “answered email,” “client call,” “fixed a report.”",
+            "Column C is optional notes, like “interrupted” or “waiting on someone.”",
+            "Set a 15-minute timer and restart it every time it goes off. Write down what you actually did, not what you planned, including email, meetings and breaks.",
+            "Missed a few? Fill them in from memory as soon as you notice, and keep going."
+          ]
         },
         {
           "title": "Paste it into Claude or ChatGPT with this prompt",
-          "text": "Paste your list in, then add this:",
-          "prompt": "Here is how I spent my week. Sort every task into 3 lists: delegate (someone else could do it), automate (a tool or AI could do it), or drop (it doesn't need doing). For each one say why in one line. Then tell me the one thing to hand off first and how."
+          "text": "At the end of the week, upload the file (in Google Sheets, go to File > Download > Microsoft Excel), or copy and paste each day's rows. Then add this:",
+          "prompt": "Here is how I spent my week, tracked in 15-minute blocks. First, group similar blocks together and total the hours for each task. Then sort every task into 3 lists: delegate (someone else could do it), automate (a tool or AI could do it), or drop (it doesn't need doing). For each one say why in one line. Then tell me the one thing to hand off first and how."
         },
         {
           "title": "Hand one thing off",
-          "text": "Pick one and hand it off this week."
+          "text": "Pick one thing and hand it off this week. Don't try to do more than one. Really work with Claude or ChatGPT to figure out how to automate it, or who you can hand it off to. Stay in the same chat and ask:",
+          "prompt": "Let's work on [the task]. Ask me questions one at a time until you understand exactly how I do it today. Then give me either the steps to automate it with the tools I already use, or a short hand-off guide I can give to someone else."
         }
       ]
     }
