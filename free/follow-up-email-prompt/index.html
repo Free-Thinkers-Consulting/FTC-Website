@@ -100,11 +100,24 @@
     <article class="guide-body">
       <p>Here&#x27;s my follow-up prompt. I use Fathom for my call notes, but any notetaker works. So do your own notes.</p>
       <section class="guide-section">
-        <p class="guide-section-label">How to use it</p>
+        <p class="guide-section-label">Set it up once</p>
+        <h2>Teach it how you write</h2>
+        <div class="step-card" id="step-1"><p class="day-num">01</p><h3>Grab 2 or 3 emails you&#x27;ve already sent</h3><p>Find a few follow-up emails you sent that sounded like you. Copy them into a note. You&#x27;ll paste them in with the prompt so the AI matches your style, not a generic one. If you use a Claude or ChatGPT project, add them to the project&#x27;s files once and you&#x27;re done.</p></div>
+      </section>
+      <section class="guide-section">
+        <p class="guide-section-label">Every call</p>
         <h2>From call to sent email</h2>
-        <div class="step-card" id="step-1"><p class="day-num">01</p><h3>Grab your call notes</h3><p>Copy the summary and action items from whatever notetaker you use: Fathom, Otter, Fireflies, or the one built into Zoom, Google Meet or Teams if your plan has it. No notetaker? Right after the call, type 3 to 5 quick bullets: what you talked about, what you agreed, and who&#x27;s doing what.</p></div>
-        <div class="step-card" id="step-2"><p class="day-num">02</p><h3>Paste them into Claude or ChatGPT with this prompt</h3><p>Paste your notes in, fill in the name, and add this:</p><div class="copy-block"><div class="copy-head"><span>Prompt</span><button type="button" class="copy-btn">Copy</button></div><pre class="copy-text">Write a follow-up email to [name] from these call notes. Thank them for one specific thing they said. List the next steps we agreed on with who owns each one and the date. Under 150 words. Sound like me: warm, direct, no fluff. Never use em dashes.</pre></div></div>
-        <div class="step-card" id="step-3"><p class="day-num">03</p><h3>Add one personal detail and send</h3><p>Read it, add one personal detail, and send.</p></div>
+        <div class="step-card" id="step-2"><p class="day-num">02</p><h3>Grab your call notes</h3><p>Copy the summary and action items from whatever notetaker you use: Fathom, Otter, Fireflies, or the one built into Zoom, Google Meet or Teams if your plan has it. Only have a transcript? Paste that instead. No notetaker? Right after the call, type 3 to 5 quick bullets:</p><ul><li>What you talked about.</li><li>What you agreed.</li><li>Who&#x27;s doing what, and by when.</li></ul></div>
+        <div class="step-card" id="step-3"><p class="day-num">03</p><h3>Paste them into Claude or ChatGPT with this prompt</h3><p>Start a new chat. Paste your notes and your sample emails in, fill in the name, and add this:</p><div class="copy-block"><div class="copy-head"><span>Prompt</span><button type="button" class="copy-btn">Copy</button></div><pre class="copy-text">Write a follow-up email to [name] from these call notes. Thank them for one specific thing they said. List the next steps we agreed on with who owns each one and the date. Under 150 words. Sound like me: warm, direct, no fluff. Match the style of my sample emails. Never use em dashes.</pre></div></div>
+        <div class="step-card" id="step-4"><p class="day-num">04</p><h3>Check every next step</h3><p>Make sure each next step, owner and date matches what you actually agreed. If the notes were fuzzy, AI may fill the gap with a guess.</p></div>
+        <div class="step-card" id="step-5"><p class="day-num">05</p><h3>Add one personal detail and send</h3><p>Add one detail only you would know, like the trip they mentioned or the project they&#x27;re excited about. Then send it while the call is still fresh.</p></div>
+        <div class="step-card" id="step-6"><p class="day-num">06</p><h3>Log it in your CRM</h3><p>Paste the email and next steps onto the contact&#x27;s record. If your CRM gives you a BCC address for logging emails, add it when you send and it&#x27;s logged for you.</p></div>
+      </section>
+      <section class="guide-section">
+        <p class="guide-section-label">Bonus</p>
+        <h2>Two more prompts for after the call</h2>
+        <div class="step-card" id="step-7"><p class="day-num">07</p><h3>Recap for your team</h3><p>Same notes, different reader:</p><div class="copy-block"><div class="copy-head"><span>Prompt</span><button type="button" class="copy-btn">Copy</button></div><pre class="copy-text">From these call notes, write a short recap for my team: who the call was with, what they need, what we promised, and who&#x27;s doing what by when. Bullet points, under 100 words.</pre></div></div>
+        <div class="step-card" id="step-8"><p class="day-num">08</p><h3>No next step agreed?</h3><p>Use this when the call ended without a clear next step:</p><div class="copy-block"><div class="copy-head"><span>Prompt</span><button type="button" class="copy-btn">Copy</button></div><pre class="copy-text">From these call notes, write a short follow-up to [name]. Thank them for their time, recap the one thing they care about most, and suggest one clear next step with two time options. Under 120 words. Never use em dashes.</pre></div></div>
       </section>
       <p class="guide-sign">Olivia Porter &middot; Founder, Free Thinkers Consulting</p>
     </article>
@@ -212,7 +225,7 @@
   </script>
   <script>
     (function () {
-      var SLUG = "follow-up-email-prompt", TOTAL = 3, CHECKLIST = false;
+      var SLUG = "follow-up-email-prompt", TOTAL = 8, CHECKLIST = false;
       var DELAY = 25 * 1000, SCROLL = 35 / 100;
       function track(name, extra) {
         try { if (window.gtag) gtag("event", name, Object.assign({ guide: SLUG }, extra || {})); } catch (err) {}

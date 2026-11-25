@@ -16,21 +16,60 @@
   ],
   "sections": [
     {
-      "label": "How to use it",
+      "label": "Set it up once",
+      "title": "Teach it how you write",
+      "steps": [
+        {
+          "title": "Grab 2 or 3 emails you've already sent",
+          "text": "Find a few follow-up emails you sent that sounded like you. Copy them into a note. You'll paste them in with the prompt so the AI matches your style, not a generic one. If you use a Claude or ChatGPT project, add them to the project's files once and you're done."
+        }
+      ]
+    },
+    {
+      "label": "Every call",
       "title": "From call to sent email",
       "steps": [
         {
           "title": "Grab your call notes",
-          "text": "Copy the summary and action items from whatever notetaker you use: Fathom, Otter, Fireflies, or the one built into Zoom, Google Meet or Teams if your plan has it. No notetaker? Right after the call, type 3 to 5 quick bullets: what you talked about, what you agreed, and who's doing what."
+          "text": "Copy the summary and action items from whatever notetaker you use: Fathom, Otter, Fireflies, or the one built into Zoom, Google Meet or Teams if your plan has it. Only have a transcript? Paste that instead. No notetaker? Right after the call, type 3 to 5 quick bullets:",
+          "list": [
+            "What you talked about.",
+            "What you agreed.",
+            "Who's doing what, and by when."
+          ]
         },
         {
           "title": "Paste them into Claude or ChatGPT with this prompt",
-          "text": "Paste your notes in, fill in the name, and add this:",
-          "prompt": "Write a follow-up email to [name] from these call notes. Thank them for one specific thing they said. List the next steps we agreed on with who owns each one and the date. Under 150 words. Sound like me: warm, direct, no fluff. Never use em dashes."
+          "text": "Start a new chat. Paste your notes and your sample emails in, fill in the name, and add this:",
+          "prompt": "Write a follow-up email to [name] from these call notes. Thank them for one specific thing they said. List the next steps we agreed on with who owns each one and the date. Under 150 words. Sound like me: warm, direct, no fluff. Match the style of my sample emails. Never use em dashes."
+        },
+        {
+          "title": "Check every next step",
+          "text": "Make sure each next step, owner and date matches what you actually agreed. If the notes were fuzzy, AI may fill the gap with a guess."
         },
         {
           "title": "Add one personal detail and send",
-          "text": "Read it, add one personal detail, and send."
+          "text": "Add one detail only you would know, like the trip they mentioned or the project they're excited about. Then send it while the call is still fresh."
+        },
+        {
+          "title": "Log it in your CRM",
+          "text": "Paste the email and next steps onto the contact's record. If your CRM gives you a BCC address for logging emails, add it when you send and it's logged for you."
+        }
+      ]
+    },
+    {
+      "label": "Bonus",
+      "title": "Two more prompts for after the call",
+      "steps": [
+        {
+          "title": "Recap for your team",
+          "text": "Same notes, different reader:",
+          "prompt": "From these call notes, write a short recap for my team: who the call was with, what they need, what we promised, and who's doing what by when. Bullet points, under 100 words."
+        },
+        {
+          "title": "No next step agreed?",
+          "text": "Use this when the call ended without a clear next step:",
+          "prompt": "From these call notes, write a short follow-up to [name]. Thank them for their time, recap the one thing they care about most, and suggest one clear next step with two time options. Under 120 words. Never use em dashes."
         }
       ]
     }

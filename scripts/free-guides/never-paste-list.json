@@ -6,13 +6,13 @@
   "title_main": "My Never-Paste",
   "title_accent": "List",
   "card_title": "My Never-Paste List (and How to Use Private Chats)",
-  "card_desc": "What I never paste into ChatGPT or Claude, plus how to start a private chat in both.",
+  "card_desc": "What I never paste into ChatGPT or Claude, what to do instead, and how to start a private chat in both.",
   "meta_title": "What Never to Paste Into ChatGPT or Claude (Free List) | Olivia Porter",
-  "meta_description": "My never-paste list for AI chats: passwords, financial and tax ID numbers, client names in contracts, and employee HR details. Plus how to use private chats in ChatGPT and Claude.",
+  "meta_description": "My never-paste list for AI chats: passwords, financial and tax ID numbers, client names in contracts, and employee HR details. What to do instead, how to use private chats in ChatGPT and Claude, and what to do if you paste something by mistake.",
   "sub": "If you wouldn't put it on a billboard, don't put it in your chat.",
   "checklist": false,
   "intro": [
-    "Here's my never-paste list."
+    "Here's my never-paste list, plus what to do instead so you still get the help you need."
   ],
   "sections": [
     {
@@ -20,13 +20,34 @@
       "title": "Never paste these",
       "steps": [
         {
-          "title": "The never-paste list",
-          "text": "Keep these out of ChatGPT, Claude, and every other AI chat:",
+          "title": "Passwords and logins",
+          "text": "That includes API keys, Wi-Fi passwords, and the shared login sitting in your team doc. If a task needs a login, do that part yourself."
+        },
+        {
+          "title": "Bank, card and tax ID numbers",
+          "text": "Account numbers, card numbers, Social Security numbers and EINs. Need help with a statement or an invoice? Delete or black out the numbers first. The AI doesn't need them to help."
+        },
+        {
+          "title": "Client names in contracts",
+          "text": "Swap in Client A, Client B before you paste. To change every name at once, use Find and replace: in Google Docs it's under Edit, and in Word it's Replace on the Home tab."
+        },
+        {
+          "title": "Employee health or HR details",
+          "text": "Medical information, performance problems, pay disputes, or anything from a personnel file. Need help with a hard HR email? Describe the situation without names or health details."
+        }
+      ]
+    },
+    {
+      "label": "Before you paste",
+      "title": "Ask yourself 3 questions",
+      "steps": [
+        {
+          "title": "The billboard check",
+          "text": "Run through these before you hit paste:",
           "list": [
-            "Passwords and logins.",
-            "Bank, card and tax ID numbers.",
-            "Client names in contracts. Swap in Client A, Client B.",
-            "Employee health or HR details."
+            "Would I be okay if this showed up on a billboard?",
+            "Can I swap the names for Client A or Employee B?",
+            "Can I delete the numbers and still get the help I need?"
           ]
         }
       ]
@@ -36,12 +57,39 @@
       "title": "How to turn on private chats",
       "steps": [
         {
-          "title": "Start a private chat",
-          "text": "A private chat isn't saved to your chat history:",
+          "title": "In ChatGPT: Temporary chat",
+          "text": "Open a new chat and select Temporary. Then choose Personalized (uses your memory and custom instructions) or Unpersonalized (uses neither) before your first message.",
           "list": [
-            "In ChatGPT, click Temporary Chat at the top of a new chat.",
-            "In Claude, click the incognito (ghost) icon at the top of a new chat."
+            "It stays out of your chat history unless you save it.",
+            "It isn't used to train models while it stays temporary, and it never creates memories.",
+            "OpenAI may keep a copy for up to 30 days for safety."
           ]
+        },
+        {
+          "title": "In Claude: Incognito chat",
+          "text": "Start a new chat (outside a project) and click the ghost icon in the upper right corner. You'll see a black border and an Incognito chat label.",
+          "list": [
+            "It isn't saved to your chat history or Claude's memory.",
+            "It isn't used to train models, even if you've turned that setting on.",
+            "Anthropic keeps it for 30 days by default. Once you close it, you can't reopen it."
+          ]
+        },
+        {
+          "title": "Pasted something by mistake?",
+          "text": "Delete the chat right away. Both companies say deleted chats are removed from their systems within 30 days, with a few exceptions.",
+          "list": [
+            "ChatGPT: click ••• next to the chat, then Delete, and confirm.",
+            "Claude: hover over the chat in the sidebar, click ⋮, then Delete, and confirm.",
+            "If it was a password, change that password now."
+          ]
+        },
+        {
+          "title": "Turn off training for every chat",
+          "text": "Private chats are for one-offs. To keep all your chats out of training, switch it off in your settings. My ChatGPT settings guide shows where, and covers Claude too.",
+          "link": {
+            "href": "/free/chatgpt-settings/",
+            "text": "See the 5 ChatGPT settings to change"
+          }
         }
       ]
     }

@@ -6,24 +6,29 @@
   "title_main": "How to Use",
   "title_accent": "Claude Meetings",
   "card_title": "How to Turn On Claude Meetings",
-  "card_desc": "Who has it, how to add Claude to a Google Meet call, and what to ask it while you talk.",
+  "card_desc": "Who has it, how to add Claude to a Google Meet call, what to ask it while you talk, and what you get after.",
   "meta_title": "How to Turn On Claude Meetings (and What to Ask It) | Olivia Porter",
-  "meta_description": "Claude Meetings is in beta on Claude Team and Enterprise plans and joins Google Meet calls. Here's how to turn it on and what to ask it during a call.",
-  "sub": "Claude can join your Google Meet calls. Here's who has it, how to add it, and what to ask it.",
+  "meta_description": "Claude Meetings is in beta on Claude Team and Enterprise plans and joins Google Meet calls. Here's how to turn it on, what to ask it during a call, and where to find the notes after.",
+  "sub": "Claude can join your Google Meet calls. Here's who has it, how to add it, what to ask it, and what you get after.",
   "checklist": false,
   "intro": [
-    "Here's the scoop on Claude Meetings."
+    "Here's the scoop on Claude Meetings.",
+    "It's in beta and only on some plans. Not on one of them? Skip to the end. There's a version that works for everyone."
   ],
   "before": {
     "label": "Who has it",
     "items": [
       [
         "Team and Enterprise plans.",
-        "Claude Meetings is in beta on Claude Team and Enterprise plans, and it works with Google Meet."
+        "Claude Meetings is in beta on Claude Team and Enterprise plans, in Claude and the Claude desktop app. It works with Google Meet."
       ],
       [
         "Your owner controls it.",
         "On Team plans it's on by default and an owner can turn it off. On Enterprise plans, an owner turns it on for all or part of the organization."
+      ],
+      [
+        "Outside guests change things.",
+        "By default Claude stays out of calls with people outside your company, and leaves if one joins partway through. If an owner allows outside guests, Claude takes notes but doesn't reply in the call's chat, and guests don't get the notes."
       ],
       [
         "Some setups can't use it yet.",
@@ -38,27 +43,27 @@
       "steps": [
         {
           "title": "Open Meetings in Claude",
-          "text": "Go to Meetings in Claude, at claude.ai/meetings."
+          "text": "In Claude or the Claude desktop app, go to Meetings, or go straight to claude.ai/meetings."
         },
         {
           "title": "Connect Google Calendar",
-          "text": "Connect your Google Calendar. An owner may need to allow Google Calendar for your organization first."
+          "text": "Connect your Google Calendar so Claude can see your meetings. An owner may need to allow Google Calendar for your organization first."
+        },
+        {
+          "title": "Get everyone's OK first",
+          "text": "Before you add Claude, make sure everyone on the call is okay with being transcribed. Add a line to the invite, like: “Heads up: I'll have Claude join our call to take notes. Let me know if you'd rather it didn't.”"
         },
         {
           "title": "Add Claude to the meeting",
-          "text": "Pick the meeting and click Add Claude. Claude joins the Google Meet call as a visible participant."
+          "text": "Pick the meeting and click Add Claude. Claude joins the Google Meet call as a participant, posts a notice in the call's chat, and shows a live tile with what it's doing. It can stay up to 8 hours and warns you before it leaves."
         },
         {
           "title": "Optional: have it join on its own",
-          "text": "To have Claude join automatically, go to Settings > Capabilities > Meetings > Auto-join.",
+          "text": "Go to Settings > Capabilities > Meetings > Auto-join. Choose all your meetings, or all your meetings except one-on-ones.",
           "link": {
             "href": "https://support.claude.com/en/articles/18325154-use-claude-meetings",
             "text": "Claude's guide: Use Claude Meetings"
           }
-        },
-        {
-          "title": "Tell your guests first",
-          "text": "Always tell your guests an AI is joining before the call."
         }
       ]
     },
@@ -66,6 +71,10 @@
       "label": "During the call",
       "title": "What to ask it",
       "steps": [
+        {
+          "title": "How to ask",
+          "text": "Say “Claude” and ask your question out loud, or type it in the Meet chat. It answers in the Meet chat, and everyone on the call can see what it posts."
+        },
         {
           "title": "Check what's agreed",
           "text": "Halfway through, or near the end, ask:",
@@ -80,6 +89,33 @@
           "title": "Turn it into a plan",
           "text": "When the call wraps, ask:",
           "prompt": "Turn this into a one page plan."
+        },
+        {
+          "title": "Pause it or take it out",
+          "text": "Ask Claude to stop listening, or use the meeting page. To take it out of the call, click Remove Claude on the meeting page."
+        }
+      ]
+    },
+    {
+      "label": "After the call",
+      "title": "What you get",
+      "steps": [
+        {
+          "title": "Find the notes",
+          "text": "Open the meeting in Meetings. You'll find the notes (a summary and any action items), the transcript, and anything Claude made during the call. People from your company who were on the invite get a recap email with a link. Claude keeps the transcript, summary and screen descriptions, not the audio."
+        },
+        {
+          "title": "Ask about it later",
+          "text": "In any regular Claude chat, you can ask about past meetings you have access to. Try:",
+          "prompt": "What did we agree on in my last call with [name], and what's still open?"
+        },
+        {
+          "title": "Send the follow-up",
+          "text": "Paste the summary into my follow-up email prompt to get a short follow-up with next steps, owners and dates.",
+          "link": {
+            "href": "/free/follow-up-email-prompt/",
+            "text": "Get the follow-up email prompt"
+          }
         }
       ]
     },

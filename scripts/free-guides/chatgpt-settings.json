@@ -6,13 +6,14 @@
   "title_main": "5 ChatGPT Settings",
   "title_accent": "To change today",
   "card_title": "The 5 ChatGPT Settings I'd Change First",
-  "card_desc": "One you need to turn OFF, and four to turn on. What each one does and where to find it.",
+  "card_desc": "One you need to turn OFF, and four to turn on. What each one does and exactly where to find it.",
   "meta_title": "5 ChatGPT Settings to Change Today (and Where to Find Them) | Olivia Porter",
-  "meta_description": "The 5 ChatGPT settings I'd change first: turn OFF model training on your chats, then turn on custom instructions, memory, multi-factor authentication, and connected apps.",
+  "meta_description": "The 5 ChatGPT settings I'd change first: turn OFF model training on your chats, then turn on custom instructions, memory, multi-factor authentication, and connected apps. Step by step.",
   "sub": "One to turn OFF, four to turn on. Click your name, then Settings.",
   "checklist": false,
   "intro": [
-    "Here are the 5 ChatGPT settings I'd change. Four you turn on. One you turn OFF, and that one matters most, so it's first."
+    "Here are the 5 ChatGPT settings I'd change. Four you turn on. One you turn OFF, and that one matters most, so it's first.",
+    "All five live in Settings. On a computer, click your name in the bottom left corner, then Settings."
   ],
   "sections": [
     {
@@ -39,19 +40,25 @@
       "steps": [
         {
           "title": "Custom instructions",
-          "text": "Personalization > Custom instructions. Tell it who you are, what you sell, who your clients are, and how you write. I also tell it never to use em dashes."
+          "text": "Settings > Personalization. Turn on Enable customization, then fill in the Custom Instructions box. Tell it who you are, what you sell, who your clients are, and how you write. The box holds 1,500 characters on Free and Go, and 5,000 on paid plans like Plus. Here's a starter. Fill in the brackets and paste it in:",
+          "prompt": "I run [business name], which helps [who you serve] with [what you do]. My clients are usually [describe them]. When you write for me, keep it short, warm and direct, in plain English. If you need more detail, ask me a question instead of guessing. Never use em dashes."
         },
         {
           "title": "Memory",
-          "text": "Personalization > Memory. Turn it on, so you stop repeating yourself."
+          "text": "Settings > Personalization > Memory. Turn on Reference saved memories so you stop repeating yourself. You can also turn on Reference chat history so it builds on past chats.",
+          "list": [
+            "See what it remembers: click Manage in the Memory settings and delete anything that's wrong.",
+            "Want it to drop something? Just tell it: “Forget that I…”",
+            "Need one chat that ignores your memory? Start a Temporary chat and choose Unpersonalized."
+          ]
         },
         {
           "title": "Multi-factor authentication",
-          "text": "Security > Multi-factor authentication. Turn it on."
+          "text": "Settings > Security and login > Multi-factor authentication (MFA). Turn it on and pick a method: an authenticator app, a push notification to a trusted device, a text message, or a passkey. Email isn't an option, so have your phone handy."
         },
         {
           "title": "Connected apps",
-          "text": "Settings > Plugins (you may see it called Apps or Connectors). Connect Google Drive and your calendar so it can work with your real files. Turn training off first, so what it reads stays out of training."
+          "text": "Settings > Plugins (older phone apps may call it Apps). Pick the app, click Install plugin, then Connect, and sign in. Start with the ones you use every day, like Google Drive, Gmail, or Outlook email and calendar, so it can work with your real files. Turn training off first (step 1), so what it reads stays out of training."
         }
       ]
     }

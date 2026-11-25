@@ -99,17 +99,26 @@
     </section>
     <article class="guide-body">
       <p>Here&#x27;s the call prep prompt I use. In my video I use HubSpot, but it works with any CRM.</p>
+      <p>Set it up once, then it&#x27;s one paste before every call.</p>
       <section class="guide-section">
         <p class="guide-section-label">Step 1</p>
         <h2>Get your CRM into the chat</h2>
-        <div class="step-card" id="step-1"><p class="day-num">01</p><h3>Option A: connect your CRM to Claude</h3><p>In Claude, go to Customize &gt; Connectors, click + next to Connectors, and add your CRM. HubSpot, Zoho CRM and monday.com are all in Claude&#x27;s connector directory. Search there for yours. You only do this once.</p><p class="step-link"><a href="https://claude.com/connectors" target="_blank" rel="noopener">Search Claude&#x27;s connector directory &#8599;</a></p></div>
-        <div class="step-card" id="step-2"><p class="day-num">02</p><h3>Option B: paste it in</h3><p>No connector for your CRM? Open the contact, copy their record and your last few emails or notes, and paste them into the chat with the prompt. This works in ChatGPT too.</p></div>
+        <div class="step-card" id="step-1"><p class="day-num">01</p><h3>Option A: connect your CRM to Claude</h3><p>In Claude, go to Customize &gt; Connectors, click + next to Connectors, and search for your CRM. HubSpot, Zoho CRM and monday.com are all in Claude&#x27;s connector directory. Click Connect and sign in with your CRM login. You only do this once. After that, in each new chat, click the + button, hover over Connectors, and make sure your CRM is switched on.</p><p class="step-link"><a href="https://claude.com/connectors" target="_blank" rel="noopener">Search Claude&#x27;s connector directory &#8599;</a></p></div>
+        <div class="step-card" id="step-2"><p class="day-num">02</p><h3>Option B: paste it in</h3><p>No connector for your CRM? Open the contact and copy these into the chat, under the prompt. This works in ChatGPT too. (Using ChatGPT with HubSpot? ChatGPT&#x27;s Sales plugin can connect to it. Look under Settings &gt; Plugins.)</p><ul><li>Their name, title and company.</li><li>The deal: stage, amount and expected close date.</li><li>Your last few emails or call notes with them.</li><li>Any open tasks.</li></ul><p class="step-link"><a href="/free/never-paste-list/">Leave out anything on my never-paste list &rarr;</a></p></div>
       </section>
       <section class="guide-section">
         <p class="guide-section-label">Step 2</p>
         <h2>Run the prompt</h2>
-        <div class="step-card" id="step-3"><p class="day-num">03</p><h3>Paste this before any call</h3><p>Fill in the contact&#x27;s name and company, then paste it into a new chat:</p><div class="copy-block"><div class="copy-head"><span>Prompt</span><button type="button" class="copy-btn">Copy</button></div><pre class="copy-text">Prep me for my call with [contact name] at [company]. Look them up in my CRM, or use the notes I pasted below. Give me: the deal stage and amount, a short recap of our last 3 emails or notes, any open tasks, and what they care about most. Then give me 3 questions to ask and the one next step I should book before we hang up. Keep it to one screen.</pre></div></div>
-        <div class="step-card" id="step-4"><p class="day-num">04</p><h3>Walk in ready</h3><p>Run it before every call. Use the 3 questions, and book the next step before you hang up.</p></div>
+        <div class="step-card" id="step-3"><p class="day-num">03</p><h3>Paste this before any call</h3><p>Start a new chat before the call. Fill in the contact&#x27;s name and company, then paste this in:</p><div class="copy-block"><div class="copy-head"><span>Prompt</span><button type="button" class="copy-btn">Copy</button></div><pre class="copy-text">Prep me for my call with [contact name] at [company]. Look them up in my CRM, or use the notes I pasted below. Give me: the deal stage and amount, a short recap of our last 3 emails or notes, any open tasks, and what they care about most. Then give me 3 questions to ask and the one next step I should book before we hang up. Keep it to one screen.</pre></div></div>
+        <div class="step-card" id="step-4"><p class="day-num">04</p><h3>Check the numbers</h3><p>AI can get things wrong. If an amount, date or name looks off, check it in your CRM before you say it on the call.</p></div>
+        <div class="step-card" id="step-5"><p class="day-num">05</p><h3>Save it so you don&#x27;t retype it</h3><p>Keep the prompt in a note you can copy from. Or put it in a project called Call Prep. In Claude, create the project, click Set project instructions, paste the prompt in, and save. In ChatGPT, click New project in the sidebar, then ••• &gt; Project settings, and paste it into the instructions. Then every call is a new chat in that project. Just type the name and company.</p></div>
+        <div class="step-card" id="step-6"><p class="day-num">06</p><h3>Walk in ready</h3><p>Keep the answer open during the call. Use the 3 questions, and book the next step before you hang up.</p></div>
+      </section>
+      <section class="guide-section">
+        <p class="guide-section-label">Step 3</p>
+        <h2>After the call</h2>
+        <div class="step-card" id="step-7"><p class="day-num">07</p><h3>Send the follow-up</h3><p>Turn your call notes into a follow-up email with my follow-up prompt. It works with any notetaker, or your own quick notes.</p><p class="step-link"><a href="/free/follow-up-email-prompt/">Get the follow-up email prompt &rarr;</a></p></div>
+        <div class="step-card" id="step-8"><p class="day-num">08</p><h3>Update your CRM</h3><p>Log your call notes and the next step on the contact&#x27;s record. The better your CRM notes, the better your prep is next time.</p></div>
       </section>
       <p class="guide-sign">Olivia Porter &middot; Founder, Free Thinkers Consulting</p>
     </article>
@@ -217,7 +226,7 @@
   </script>
   <script>
     (function () {
-      var SLUG = "call-prep-prompt", TOTAL = 4, CHECKLIST = false;
+      var SLUG = "call-prep-prompt", TOTAL = 8, CHECKLIST = false;
       var DELAY = 25 * 1000, SCROLL = 35 / 100;
       function track(name, extra) {
         try { if (window.gtag) gtag("event", name, Object.assign({ guide: SLUG }, extra || {})); } catch (err) {}
