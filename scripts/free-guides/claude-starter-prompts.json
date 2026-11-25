@@ -6,38 +6,106 @@
   "title_main": "3 Claude",
   "title_accent": "Starter prompts",
   "card_title": "3 Starter Prompts for Claude",
-  "card_desc": "One starter prompt each for Projects, Connectors and Artifacts, so you can try all three with your own business.",
+  "card_desc": "Step by step: teach Claude your business with Projects, connect your calendar, and build a checklist you can share.",
   "meta_title": "3 Claude Starter Prompts: Projects, Connectors and Artifacts | Olivia Porter",
-  "meta_description": "Three starter prompts to try Claude's Projects, Connectors, and Artifacts with your own business: answer customer questions, prep your week, and build a shareable checklist.",
-  "sub": "One for Projects, one for Connectors, one for Artifacts. Start at claude.ai.",
+  "meta_description": "Step-by-step setup for Claude's Projects, Connectors and Artifacts: upload your business files, connect your calendar and email, and build a shareable client onboarding checklist, with a prompt for each.",
+  "sub": "Projects, Connectors and Artifacts, step by step, with a prompt for each.",
   "checklist": false,
   "intro": [
-    "Here are my 3 starter prompts for Claude."
+    "Here are my 3 starter prompts for Claude, one each for Projects, Connectors and Artifacts.",
+    "Do them in order. By the end, Claude knows your business, can see your week, and has built you something to share with your team."
   ],
   "sections": [
     {
-      "label": "The prompts",
-      "title": "Try all three",
+      "label": "Prompt 1: Projects",
+      "title": "Teach Claude your business",
       "steps": [
         {
-          "title": "Projects",
-          "text": "Create a project called [Your business]. Upload your offer, pricing and FAQs. Then ask:",
-          "prompt": "Using these files, write 5 answers to the questions my customers ask most."
+          "title": "Create a project for your business",
+          "text": "On your computer, open the Claude desktop app or go to claude.ai. Click Projects in the left sidebar, then + New Project, and name it after your business. Projects work on every plan, including free (free accounts get up to 5)."
         },
         {
-          "title": "Connectors",
-          "text": "Go to Settings > Connectors and connect Google Drive, your calendar, or your CRM. Then ask:",
+          "title": "Upload everything about your business",
+          "text": "This project is Claude's reference library for your business, so give it everything a new hire would need on day one. In the project knowledge panel on the right, click + and add:",
+          "list": [
+            "Your offer: what you sell, who it's for and what's included.",
+            "Your pricing: packages, rates and what costs extra.",
+            "Your FAQs: the questions customers ask and how you answer them.",
+            "Your website copy, sales pages or brochures.",
+            "The proposals, onboarding docs and welcome emails you send clients.",
+            "Your process: how a new customer gets from first call to done."
+          ],
+          "link": {
+            "href": "/free/never-paste-list/",
+            "text": "Before you upload: my never-paste list"
+          }
+        },
+        {
+          "title": "Tell Claude how to work",
+          "text": "Click Set project instructions, paste this in, fill in the brackets, and save:",
+          "prompt": "I run [business name], which helps [who you serve] with [what you do]. Write in a [friendly, plain-English] tone. Use the files in this project for any facts about my offer, pricing or process. If the answer isn't in the files, say so instead of guessing."
+        },
+        {
+          "title": "Ask your first question",
+          "text": "Start a new chat inside the project and ask the prompt below. Read every answer the way your customer would. If something's wrong, fix the file in the project, not just the chat, so Claude gets it right from then on.",
+          "prompt": "Using these files, write 5 answers to the questions my customers ask most."
+        }
+      ]
+    },
+    {
+      "label": "Prompt 2: Connectors",
+      "title": "Let Claude see your week",
+      "steps": [
+        {
+          "title": "Connect your calendar and email",
+          "text": "In Claude, go to Customize > Connectors and click + next to Connectors. Pick Google Calendar, click Connect, and sign in to give Claude access. Add Gmail and Google Drive the same way, plus your CRM if it's in the directory. On Microsoft 365 instead of Google? Check the directory for it. On a Team or Enterprise plan, an owner may need to turn connectors on first.",
+          "link": {
+            "href": "https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities",
+            "text": "Claude's guide: Use connectors"
+          }
+        },
+        {
+          "title": "Turn them on in your chat",
+          "text": "In a new chat, click the + button, hover over Connectors, and make sure the ones you just added are switched on."
+        },
+        {
+          "title": "Ask about your week",
+          "text": "Then ask:",
           "prompt": "What's on my calendar this week and what do I need to prep?"
         },
         {
-          "title": "Artifacts",
-          "text": "In any chat, ask:",
+          "title": "Go one step further",
+          "text": "If you connected your email and Drive too, follow up with:",
+          "prompt": "For each meeting, find the related emails and files and give me a 3-line prep note: who it's with, what we last talked about, and what I need to bring."
+        }
+      ]
+    },
+    {
+      "label": "Prompt 3: Artifacts",
+      "title": "Build something you can share",
+      "steps": [
+        {
+          "title": "Ask for a checklist",
+          "text": "In any chat, ask the prompt below. Even better, ask it inside your business project from Prompt 1, so Claude builds it from your real process.",
           "prompt": "Build me a client onboarding checklist for [your business] as an interactive checklist I can share with my team."
+        },
+        {
+          "title": "Make it yours",
+          "text": "Claude builds it in a panel next to the chat. Ask for changes in plain English, for example:",
+          "list": [
+            "“Add a step for sending the welcome email.”",
+            "“Group the steps by week.”",
+            "“Add who owns each step.”"
+          ]
+        },
+        {
+          "title": "Share it with your team",
+          "text": "When it looks right, open the checklist, click Share, and choose Anyone with the link. Most shared checklists open without a Claude account. On Team and Enterprise plans, sharing stays inside your company unless an owner allows outside links."
         }
       ]
     }
   ],
-  "closing": "Start at claude.ai.",
+  "closing": "Start at claude.ai or in the Claude desktop app.",
   "offer": {
     "label": "The CLARITY Method",
     "headline": "Want Claude working from your real customer data?",

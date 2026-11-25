@@ -21,7 +21,7 @@
       "steps": [
         {
           "title": "Option A: connect your CRM to Claude",
-          "text": "In Claude, go to Settings > Connectors and add your CRM. HubSpot, Zoho CRM and monday.com are all in Claude's connector directory. Search there for yours. You only do this once.",
+          "text": "In Claude, go to Customize > Connectors, click + next to Connectors, and add your CRM. HubSpot, Zoho CRM and monday.com are all in Claude's connector directory. Search there for yours. You only do this once.",
           "link": {
             "href": "https://claude.com/connectors",
             "text": "Search Claude's connector directory"
