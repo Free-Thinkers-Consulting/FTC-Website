@@ -1,0 +1,79 @@
+{
+  "slug": "claim-your-business-chatgpt",
+  "keyword": "CLAIM",
+  "order": 11,
+  "tag": "ChatGPT",
+  "title_main": "Claim Your Business in",
+  "title_accent": "ChatGPT",
+  "card_title": "How to Claim Your Business in ChatGPT",
+  "card_desc": "Step by step: find your listing in ChatGPT Business Hub, verify it, and manage the details ChatGPT has about you.",
+  "meta_title": "How to Claim Your Business in ChatGPT Business Hub (Free Guide) | Olivia Porter",
+  "meta_description": "Step by step: claim your business in ChatGPT Business Hub, verify it, finish the identity check, and update your listing details.",
+  "sub": "ChatGPT Business Hub lets you claim your business and manage the information you give ChatGPT about it. Here's how, step by step.",
+  "checklist": false,
+  "intro": [
+    "Here's how to claim your business in ChatGPT."
+  ],
+  "before": {
+    "label": "Before you start",
+    "items": [
+      [
+        "Make sure you can claim it.",
+        "You need to own the business or be authorized to represent it. Local stores and restaurants can currently claim only an existing U.S. listing."
+      ],
+      [
+        "Have your paperwork handy.",
+        "For the identity check you may need a government-issued ID, business registration information, and proof that you're authorized to represent the business."
+      ]
+    ]
+  },
+  "sections": [
+    {
+      "label": "Step by step",
+      "title": "Claim your listing",
+      "steps": [
+        {
+          "title": "Open Business Hub",
+          "text": "Sign in to ChatGPT and open Business Hub from the sidebar, or go to chatgpt.com/business-hub."
+        },
+        {
+          "title": "Find your business",
+          "text": "Search for your business by name, pick the listing that matches, and confirm which ChatGPT account will manage it."
+        },
+        {
+          "title": "Verify it",
+          "text": "Pick one way to prove it's yours:",
+          "list": [
+            "Phone",
+            "Business email (the code goes to the email address associated with your business)",
+            "Website domain (you add a TXT record to your domain's DNS settings)",
+            "Shopify"
+          ]
+        },
+        {
+          "title": "Wait for the review",
+          "text": "OpenAI reviews your claim and emails you its decision, or asks for more information."
+        },
+        {
+          "title": "Finish the identity check",
+          "text": "Next you verify your identity through Persona. You need this before you can publish changes to your listing."
+        },
+        {
+          "title": "Update your details",
+          "text": "Once your claim and identity check are approved, update your website, business description, product or service category, and logo, plus delivery and return policies if they apply.",
+          "link": {
+            "href": "https://help.openai.com/en/articles/20001635-setting-up-your-business-on-chatgpt",
+            "text": "OpenAI's guide: Setting up your business on ChatGPT"
+          }
+        }
+      ]
+    }
+  ],
+  "closing": "Claiming doesn't guarantee more visibility, and changes can take time to show up. What it does is put you in charge of the information you give ChatGPT about your business.",
+  "offer": {
+    "label": "The CLARITY Method",
+    "headline": "Want AI working inside your business, not just talking about it?",
+    "card_headline": "Ready to put AI to work in your business?",
+    "body": "CLARITY is my 30-day course for setting up your CRM the way a senior architect would, with AI (Claude or ChatGPT) helping along the way."
+  }
+}

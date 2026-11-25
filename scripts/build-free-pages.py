@@ -23,7 +23,7 @@ SITE = json.loads((SRC / "_site.json").read_text())
 OFFER = SITE["offer"]
 REF = (ROOT / "ai-readiness" / "index.html").read_text()
 CSS_VER = "16"
-FREE_CSS_VER = "4"
+FREE_CSS_VER = "5"
 BASE = "https://freethinkersconsulting.com"
 # Shared logomark share card (see /assets/og/); 2400x1260, crop-safe.
 OG_IMAGE = f"{BASE}/assets/og/ftc-logomark.png"
@@ -152,6 +152,9 @@ def guide_page(g):
                 body += (f'<div class="copy-block"><div class="copy-head"><span>Prompt</span>'
                          f'<button type="button" class="copy-btn">Copy</button></div>'
                          f'<pre class="copy-text">{e(st["prompt"])}</pre></div>')
+            if st.get("link"):
+                body += (f'<p class="step-link"><a href="{e(st["link"]["href"])}" target="_blank" rel="noopener">'
+                         f'{e(st["link"]["text"])} &#8599;</a></p>')
             done = ""
             if g.get("checklist"):
                 done = (f'<label class="step-done"><input type="checkbox" data-step="{n}" /> '

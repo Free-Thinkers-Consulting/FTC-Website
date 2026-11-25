@@ -1,0 +1,94 @@
+{
+  "slug": "claude-meetings",
+  "keyword": "MEETINGS",
+  "order": 16,
+  "tag": "Claude",
+  "title_main": "How to Use",
+  "title_accent": "Claude Meetings",
+  "card_title": "How to Turn On Claude Meetings",
+  "card_desc": "Who has it, how to add Claude to a Google Meet call, and what to ask it while you talk.",
+  "meta_title": "How to Turn On Claude Meetings (and What to Ask It) | Olivia Porter",
+  "meta_description": "Claude Meetings is in beta on Claude Team and Enterprise plans and joins Google Meet calls. Here's how to turn it on and what to ask it during a call.",
+  "sub": "Claude can join your Google Meet calls. Here's who has it, how to add it, and what to ask it.",
+  "checklist": false,
+  "intro": [
+    "Here's the scoop on Claude Meetings."
+  ],
+  "before": {
+    "label": "Who has it",
+    "items": [
+      [
+        "Team and Enterprise plans.",
+        "Claude Meetings is in beta on Claude Team and Enterprise plans, and it works with Google Meet."
+      ],
+      [
+        "Your owner controls it.",
+        "On Team plans it's on by default and an owner can turn it off. On Enterprise plans, an owner turns it on for all or part of the organization."
+      ],
+      [
+        "Some setups can't use it yet.",
+        "During the beta it isn't available to some organizations, including those set up for zero data retention, HIPAA, or customer-managed encryption keys."
+      ]
+    ]
+  },
+  "sections": [
+    {
+      "label": "Step by step",
+      "title": "Add Claude to a call",
+      "steps": [
+        {
+          "title": "Open Meetings in Claude",
+          "text": "Go to Meetings in Claude, at claude.ai/meetings."
+        },
+        {
+          "title": "Connect Google Calendar",
+          "text": "Connect your Google Calendar. An owner may need to allow Google Calendar for your organization first."
+        },
+        {
+          "title": "Add Claude to the meeting",
+          "text": "Pick the meeting and click Add Claude. Claude joins the Google Meet call as a visible participant."
+        },
+        {
+          "title": "Optional: have it join on its own",
+          "text": "To have Claude join automatically, go to Settings > Capabilities > Meetings > Auto-join.",
+          "link": {
+            "href": "https://support.claude.com/en/articles/18325154-use-claude-meetings",
+            "text": "Claude's guide: Use Claude Meetings"
+          }
+        },
+        {
+          "title": "Tell your guests first",
+          "text": "Always tell your guests an AI is joining before the call."
+        }
+      ]
+    },
+    {
+      "label": "During the call",
+      "title": "What to ask it",
+      "steps": [
+        {
+          "title": "Check what's agreed",
+          "text": "Halfway through, or near the end, ask:",
+          "prompt": "Summarize what we agreed so far."
+        },
+        {
+          "title": "Get the action items",
+          "text": "Before everyone drops off, ask:",
+          "prompt": "List the action items with owners."
+        },
+        {
+          "title": "Turn it into a plan",
+          "text": "When the call wraps, ask:",
+          "prompt": "Turn this into a one page plan."
+        }
+      ]
+    }
+  ],
+  "closing": "It's a beta, so details can change. Claude's help article has the latest.",
+  "offer": {
+    "label": "The CLARITY Method",
+    "headline": "Want AI working inside your business every day?",
+    "card_headline": "Ready to put AI to work every day?",
+    "body": "CLARITY is my 30-day course for setting up your CRM the way a senior architect would, with AI (Claude or ChatGPT) helping along the way."
+  }
+}

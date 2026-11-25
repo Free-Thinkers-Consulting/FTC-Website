@@ -113,6 +113,7 @@
 .step-card h3 { font-size: 1.15rem; text-transform: uppercase; letter-spacing: .04em; font-weight: 800; margin: 0 0 10px; }
 .step-card p { margin: 0; font-size: 1.06rem; line-height: 1.65; }
 .step-card ul { margin: 10px 0 0; padding-left: 1.2em; }
+.step-card .step-link { margin-top: 14px; font-weight: 700; }
 .step-card li { font-size: 1.04rem; line-height: 1.6; margin: 0 0 6px; }
 
 .step-done {

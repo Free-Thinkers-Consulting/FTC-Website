@@ -1,0 +1,56 @@
+{
+  "slug": "never-paste-list",
+  "keyword": "SAFE",
+  "order": 18,
+  "tag": "AI safety",
+  "title_main": "My Never-Paste",
+  "title_accent": "List",
+  "card_title": "My Never-Paste List (and How to Use Private Chats)",
+  "card_desc": "What I never paste into ChatGPT or Claude, plus how to start a private chat in both.",
+  "meta_title": "What Never to Paste Into ChatGPT or Claude (Free List) | Olivia Porter",
+  "meta_description": "My never-paste list for AI chats: passwords, financial and tax ID numbers, client names in contracts, and employee HR details. Plus how to use private chats in ChatGPT and Claude.",
+  "sub": "If you wouldn't put it on a billboard, don't put it in your chat.",
+  "checklist": false,
+  "intro": [
+    "Here's my never-paste list."
+  ],
+  "sections": [
+    {
+      "label": "The list",
+      "title": "Never paste these",
+      "steps": [
+        {
+          "title": "The never-paste list",
+          "text": "Keep these out of ChatGPT, Claude, and every other AI chat:",
+          "list": [
+            "Passwords and logins.",
+            "Bank, card and tax ID numbers.",
+            "Client names in contracts. Swap in Client A, Client B.",
+            "Employee health or HR details."
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Private chats",
+      "title": "How to turn on private chats",
+      "steps": [
+        {
+          "title": "Start a private chat",
+          "text": "A private chat isn't saved to your chat history:",
+          "list": [
+            "In ChatGPT, click Temporary Chat at the top of a new chat.",
+            "In Claude, click the incognito (ghost) icon at the top of a new chat."
+          ]
+        }
+      ]
+    }
+  ],
+  "closing": "A private chat still isn't the place for anything on the never-paste list. My rule: if you wouldn't put it on a billboard, don't put it in your chat.",
+  "offer": {
+    "label": "The CLARITY Method",
+    "headline": "Want AI set up safely in your business?",
+    "card_headline": "Want AI set up the safe way?",
+    "body": "CLARITY is my 30-day course for setting up your CRM the way a senior architect would, with AI (Claude or ChatGPT) helping along the way."
+  }
+}

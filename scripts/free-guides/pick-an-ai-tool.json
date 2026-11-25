@@ -1,0 +1,44 @@
+{
+  "slug": "pick-an-ai-tool",
+  "keyword": "TASK",
+  "order": 13,
+  "tag": "AI tools",
+  "title_main": "3 Questions Before You Pick",
+  "title_accent": "An AI tool",
+  "card_title": "3 Questions to Ask Before You Pick an AI Tool",
+  "card_desc": "Pick the task first, then the tool. The 3 questions I ask before anyone buys an AI tool.",
+  "meta_title": "3 Questions to Ask Before You Pick an AI Tool | Olivia Porter",
+  "meta_description": "Before you buy another AI tool, answer these 3 questions: which task eats your week, what done looks like, and what you already pay for that could do it.",
+  "sub": "Pick the task first. Then the tool.",
+  "checklist": false,
+  "intro": [
+    "Here are the 3 questions I ask before anyone buys an AI tool."
+  ],
+  "sections": [
+    {
+      "label": "The questions",
+      "title": "Answer these first",
+      "steps": [
+        {
+          "title": "Which task eats the most hours in your week?",
+          "text": "If you're not sure, write down where your hours go for one week."
+        },
+        {
+          "title": "What does done look like for that task?",
+          "text": "Be specific."
+        },
+        {
+          "title": "What do you already pay for that could do it?",
+          "text": "Check ChatGPT, Claude, your CRM, and Google or Microsoft before you buy anything new."
+        }
+      ]
+    }
+  ],
+  "closing": "Pick the task first. Then the tool.",
+  "offer": {
+    "label": "The CLARITY Method",
+    "headline": "Want help picking the first task to hand to AI?",
+    "card_headline": "Want help picking the right task?",
+    "body": "CLARITY is my 30-day course for setting up your CRM the way a senior architect would, with AI (Claude or ChatGPT) helping along the way."
+  }
+}

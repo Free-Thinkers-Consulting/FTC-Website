@@ -1,0 +1,44 @@
+{
+  "slug": "call-prep-prompt",
+  "keyword": "PREP",
+  "order": 10,
+  "tag": "Claude + HubSpot",
+  "title_main": "The Call Prep",
+  "title_accent": "Prompt",
+  "card_title": "The Call Prep Prompt (Claude + HubSpot)",
+  "card_desc": "The prompt I paste before every sales call. Claude looks the contact up in HubSpot and tells me what to ask.",
+  "meta_title": "The Call Prep Prompt for Claude + HubSpot (Free) | Olivia Porter",
+  "meta_description": "The exact prompt I use to prep for sales calls: connect HubSpot to Claude, paste this in, and walk in with the deal stage, recent notes, and 3 questions to ask.",
+  "sub": "Connect HubSpot to Claude once. Then paste this before every call and walk in ready.",
+  "checklist": false,
+  "intro": [
+    "Here's the call prep prompt I use. You set it up once, then it's one paste before every call."
+  ],
+  "sections": [
+    {
+      "label": "How to use it",
+      "title": "Three steps, one minute",
+      "steps": [
+        {
+          "title": "Connect HubSpot to Claude",
+          "text": "In Claude, go to Settings > Connectors and connect HubSpot. You only do this once."
+        },
+        {
+          "title": "Paste this before any call",
+          "text": "Fill in the contact's name and company, then paste it into a new chat.",
+          "prompt": "Prep me for my call with [contact name] at [company]. Look them up in HubSpot. Give me: the deal stage and amount, a short recap of our last 3 emails or notes, any open tasks, and what they care about most. Then give me 3 questions to ask and the one next step I should book before we hang up. Keep it to one screen."
+        },
+        {
+          "title": "Walk in ready",
+          "text": "Run it before every call. Use the 3 questions, and book the next step before you hang up."
+        }
+      ]
+    }
+  ],
+  "offer": {
+    "label": "The CLARITY Method",
+    "headline": "This prompt is only as good as your CRM.",
+    "card_headline": "Want a CRM worth asking questions?",
+    "body": "CLARITY is my 30-day course for setting up your CRM the way a senior architect would, with AI (Claude or ChatGPT) helping along the way."
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "slug": "claude-starter-prompts",
+  "keyword": "CLAUDE",
+  "order": 15,
+  "tag": "Claude",
+  "title_main": "3 Claude",
+  "title_accent": "Starter prompts",
+  "card_title": "3 Starter Prompts for Claude",
+  "card_desc": "One starter prompt each for Projects, Connectors and Artifacts, so you can try all three with your own business.",
+  "meta_title": "3 Claude Starter Prompts: Projects, Connectors and Artifacts | Olivia Porter",
+  "meta_description": "Three starter prompts to try Claude's Projects, Connectors, and Artifacts with your own business: answer customer questions, prep your week, and build a shareable checklist.",
+  "sub": "One for Projects, one for Connectors, one for Artifacts. Start at claude.ai.",
+  "checklist": false,
+  "intro": [
+    "Here are my 3 starter prompts for Claude."
+  ],
+  "sections": [
+    {
+      "label": "The prompts",
+      "title": "Try all three",
+      "steps": [
+        {
+          "title": "Projects",
+          "text": "Create a project called [Your business]. Upload your offer, pricing and FAQs. Then ask:",
+          "prompt": "Using these files, write 5 answers to the questions my customers ask most."
+        },
+        {
+          "title": "Connectors",
+          "text": "Go to Settings > Connectors and connect Google Drive, Calendar or HubSpot. Then ask:",
+          "prompt": "What's on my calendar this week and what do I need to prep?"
+        },
+        {
+          "title": "Artifacts",
+          "text": "In any chat, ask:",
+          "prompt": "Build me a client onboarding checklist for [your business] as an interactive checklist I can share with my team."
+        }
+      ]
+    }
+  ],
+  "closing": "Start at claude.ai.",
+  "offer": {
+    "label": "The CLARITY Method",
+    "headline": "Want Claude working from your real customer data?",
+    "card_headline": "Want Claude working from real data?",
+    "body": "CLARITY is my 30-day course for setting up your CRM the way a senior architect would, with AI (Claude or ChatGPT) helping along the way."
+  }
+}
