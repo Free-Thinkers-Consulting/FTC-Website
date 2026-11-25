@@ -1,0 +1,21 @@
+{
+  "_note": "Cards on /free/ that point to free resources built elsewhere (not guides made by this script). They are sorted together with the guides by \"order\". Edit, then run: python3 scripts/build-free-pages.py",
+  "links": [
+    {
+      "order": 2,
+      "href": "https://start.freethinkersconsulting.com/crm?utm_source=free-guide&utm_medium=card&utm_campaign=hub&utm_content=crm-training",
+      "tag": "Free live training",
+      "card_title": "Connect Claude to Your CRM",
+      "card_desc": "A free live session where I walk you through connecting Claude to your CRM, step by step. Join the waitlist for the next one.",
+      "cta": "Join the waitlist"
+    },
+    {
+      "order": 3,
+      "href": "/scorecard/",
+      "tag": "Salesforce",
+      "card_title": "The Salesforce Org Health Scorecard",
+      "card_desc": "Grade your Salesforce org in 3 minutes. 20 blunt questions from the audit we run on enterprise orgs. Get a score out of 100 and the one risk to fix first.",
+      "cta": "Take the scorecard"
+    }
+  ]
+}

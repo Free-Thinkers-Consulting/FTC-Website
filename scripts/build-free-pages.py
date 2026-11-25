@@ -2,7 +2,9 @@
 """Build the free guide pages: /free/ (hub) and /free/<slug>/ (one per guide).
 
 Each guide is a JSON file in scripts/free-guides/. Shared settings (the course
-offer, social links) live in scripts/free-guides/_site.json.
+offer, social links) live in scripts/free-guides/_site.json. Hub cards that
+point to free resources built elsewhere (e.g. /scorecard/) live in
+scripts/free-guides/_links.json.
 
 The site header and footer are copied from ai-readiness/index.html so they stay
 byte-identical with the rest of the site.
@@ -277,18 +279,25 @@ def page_script(slug, total, checklist):
 """
 
 
-def hub_page(guides):
+def hub_card(href, tag, title, desc, cta):
+    return f"""        <a class="free-card" href="{e(href)}">
+          <span class="free-tag">{e(tag)}</span>
+          <h3>{e(title)}</h3>
+          <p>{e(desc)}</p>
+          <span class="free-go">{e(cta)} &rarr;</span>
+        </a>
+"""
+
+
+def hub_page(guides, links=()):
     path = "/free/"
     title = "Free Guides and Resources | Olivia Porter, Free Thinkers Consulting"
     desc = "Every free guide, checklist, and resource from Olivia Porter's videos, in one place. CRMs, AI, and getting your time back."
-    cards = "".join(
-        f"""        <a class="free-card" href="/free/{e(g["slug"])}/">
-          <span class="free-tag">{e(g.get("tag", "Free guide"))}</span>
-          <h3>{e(g["card_title"])}</h3>
-          <p>{e(g["card_desc"])}</p>
-          <span class="free-go">Read guide &rarr;</span>
-        </a>
-""" for g in guides)
+    entries = [(g.get("order", 99), f"/free/{g['slug']}/", g.get("tag", "Free guide"), g["card_title"], g["card_desc"], "Read guide")
+               for g in guides]
+    entries += [(l.get("order", 99), l["href"], l["tag"], l["card_title"], l["card_desc"], l["cta"]) for l in links]
+    entries.sort(key=lambda x: x[0])
+    cards = "".join(hub_card(*x[1:]) for x in entries)
     body = f"""
 
   <main>
@@ -340,7 +349,9 @@ if __name__ == "__main__":
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(page)
         written.append(path)
-    path, page = hub_page(guides)
+    links_file = SRC / "_links.json"
+    links = json.loads(links_file.read_text())["links"] if links_file.exists() else []
+    path, page = hub_page(guides, links)
     (ROOT / "free").mkdir(exist_ok=True)
     (ROOT / "free" / "index.html").write_text(page)
     written.insert(0, path)
