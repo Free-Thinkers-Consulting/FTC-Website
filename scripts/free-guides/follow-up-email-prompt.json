@@ -2,17 +2,17 @@
   "slug": "follow-up-email-prompt",
   "keyword": "NOTES",
   "order": 14,
-  "tag": "Claude + Fathom",
+  "tag": "Any notetaker + AI",
   "title_main": "The Follow-Up Email",
   "title_accent": "Prompt",
-  "card_title": "The Follow-Up Email Prompt (Fathom + Claude)",
-  "card_desc": "Turn your Fathom call summary into a short follow-up email with next steps, owners and dates.",
-  "meta_title": "The Follow-Up Email Prompt for Fathom + Claude (Free) | Olivia Porter",
-  "meta_description": "My follow-up email prompt: paste your Fathom call summary into Claude and get a short, warm follow-up with next steps, owners, and dates.",
-  "sub": "After a call, paste your Fathom summary into Claude with this prompt. Read it, add one personal detail, and send.",
+  "card_title": "The Follow-Up Email Prompt",
+  "card_desc": "Turn any call summary, or your own quick notes, into a short follow-up email with next steps, owners and dates. Works in Claude or ChatGPT.",
+  "meta_title": "The Follow-Up Email Prompt (Works With Any Notetaker) | Olivia Porter",
+  "meta_description": "My follow-up email prompt: paste your call notes from any notetaker, or your own bullets, into Claude or ChatGPT and get a short, warm follow-up with next steps, owners, and dates.",
+  "sub": "After a call, paste your notes into Claude or ChatGPT with this prompt. Read it, add one personal detail, and send.",
   "checklist": false,
   "intro": [
-    "Here's my follow-up prompt."
+    "Here's my follow-up prompt. I use Fathom for my call notes, but any notetaker works. So do your own notes."
   ],
   "sections": [
     {
@@ -20,13 +20,13 @@
       "title": "From call to sent email",
       "steps": [
         {
-          "title": "Copy your Fathom summary",
-          "text": "After the call, copy the Fathom summary and action items."
+          "title": "Grab your call notes",
+          "text": "Copy the summary and action items from whatever notetaker you use: Fathom, Otter, Fireflies, or the one built into Zoom, Google Meet or Teams if your plan has it. No notetaker? Right after the call, type 3 to 5 quick bullets: what you talked about, what you agreed, and who's doing what."
         },
         {
-          "title": "Paste it into Claude with this prompt",
-          "text": "Paste the summary into Claude, fill in the name, and add this:",
-          "prompt": "Write a follow-up email to [name] from this call summary. Thank them for one specific thing they said. List the next steps we agreed on with who owns each one and the date. Under 150 words. Sound like me: warm, direct, no fluff. Never use em dashes."
+          "title": "Paste them into Claude or ChatGPT with this prompt",
+          "text": "Paste your notes in, fill in the name, and add this:",
+          "prompt": "Write a follow-up email to [name] from these call notes. Thank them for one specific thing they said. List the next steps we agreed on with who owns each one and the date. Under 150 words. Sound like me: warm, direct, no fluff. Never use em dashes."
         },
         {
           "title": "Add one personal detail and send",

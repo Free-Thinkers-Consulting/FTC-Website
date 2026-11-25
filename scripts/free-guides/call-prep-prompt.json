@@ -2,31 +2,45 @@
   "slug": "call-prep-prompt",
   "keyword": "PREP",
   "order": 10,
-  "tag": "Claude + HubSpot",
+  "tag": "Claude + your CRM",
   "title_main": "The Call Prep",
   "title_accent": "Prompt",
-  "card_title": "The Call Prep Prompt (Claude + HubSpot)",
-  "card_desc": "The prompt I paste before every sales call. Claude looks the contact up in HubSpot and tells me what to ask.",
-  "meta_title": "The Call Prep Prompt for Claude + HubSpot (Free) | Olivia Porter",
-  "meta_description": "The exact prompt I use to prep for sales calls: connect HubSpot to Claude, paste this in, and walk in with the deal stage, recent notes, and 3 questions to ask.",
-  "sub": "Connect HubSpot to Claude once. Then paste this before every call and walk in ready.",
+  "card_title": "The Call Prep Prompt (Works With Any CRM)",
+  "card_desc": "The prompt I paste before every sales call. Connect your CRM or paste in the contact's notes, and walk in knowing what to ask.",
+  "meta_title": "The Call Prep Prompt for Claude and Any CRM (Free) | Olivia Porter",
+  "meta_description": "The prompt I use to prep for sales calls. Works with any CRM: connect it to Claude or paste in the contact's notes, and walk in with the deal stage, recent history, and 3 questions to ask.",
+  "sub": "Works with any CRM. Connect it to Claude once, or paste in the contact's notes, then run this before every call.",
   "checklist": false,
   "intro": [
-    "Here's the call prep prompt I use. You set it up once, then it's one paste before every call."
+    "Here's the call prep prompt I use. In my video I use HubSpot, but it works with any CRM."
   ],
   "sections": [
     {
-      "label": "How to use it",
-      "title": "Three steps, one minute",
+      "label": "Step 1",
+      "title": "Get your CRM into the chat",
       "steps": [
         {
-          "title": "Connect HubSpot to Claude",
-          "text": "In Claude, go to Settings > Connectors and connect HubSpot. You only do this once."
+          "title": "Option A: connect your CRM to Claude",
+          "text": "In Claude, go to Settings > Connectors and add your CRM. HubSpot, Zoho CRM and monday.com are all in Claude's connector directory. Search there for yours. You only do this once.",
+          "link": {
+            "href": "https://claude.com/connectors",
+            "text": "Search Claude's connector directory"
+          }
         },
         {
+          "title": "Option B: paste it in",
+          "text": "No connector for your CRM? Open the contact, copy their record and your last few emails or notes, and paste them into the chat with the prompt. This works in ChatGPT too."
+        }
+      ]
+    },
+    {
+      "label": "Step 2",
+      "title": "Run the prompt",
+      "steps": [
+        {
           "title": "Paste this before any call",
-          "text": "Fill in the contact's name and company, then paste it into a new chat.",
-          "prompt": "Prep me for my call with [contact name] at [company]. Look them up in HubSpot. Give me: the deal stage and amount, a short recap of our last 3 emails or notes, any open tasks, and what they care about most. Then give me 3 questions to ask and the one next step I should book before we hang up. Keep it to one screen."
+          "text": "Fill in the contact's name and company, then paste it into a new chat:",
+          "prompt": "Prep me for my call with [contact name] at [company]. Look them up in my CRM, or use the notes I pasted below. Give me: the deal stage and amount, a short recap of our last 3 emails or notes, any open tasks, and what they care about most. Then give me 3 questions to ask and the one next step I should book before we hang up. Keep it to one screen."
         },
         {
           "title": "Walk in ready",

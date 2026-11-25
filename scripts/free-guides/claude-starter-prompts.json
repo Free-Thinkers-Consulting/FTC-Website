@@ -26,7 +26,7 @@
         },
         {
           "title": "Connectors",
-          "text": "Go to Settings > Connectors and connect Google Drive, Calendar or HubSpot. Then ask:",
+          "text": "Go to Settings > Connectors and connect Google Drive, your calendar, or your CRM. Then ask:",
           "prompt": "What's on my calendar this week and what do I need to prep?"
         },
         {

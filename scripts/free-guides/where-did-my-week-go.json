@@ -2,13 +2,13 @@
   "slug": "where-did-my-week-go",
   "keyword": "WEEK",
   "order": 17,
-  "tag": "Claude",
+  "tag": "Claude or ChatGPT",
   "title_main": "Where Did My",
   "title_accent": "Week go?",
   "card_title": "The “Where Did My Week Go?” Prompt",
-  "card_desc": "Paste in how you spent your week. Claude sorts every task into delegate, automate or drop, and picks the first thing to hand off.",
+  "card_desc": "Paste in how you spent your week. AI sorts every task into delegate, automate or drop, and picks the first thing to hand off.",
   "meta_title": "The “Where Did My Week Go?” Prompt (Free) | Olivia Porter",
-  "meta_description": "List how you spent your week, paste it into Claude with this prompt, and get every task sorted into delegate, automate, or drop, plus the first thing to hand off.",
+  "meta_description": "List how you spent your week, paste it into Claude or ChatGPT with this prompt, and get every task sorted into delegate, automate, or drop, plus the first thing to hand off.",
   "sub": "Sort your week into delegate, automate or drop. Then hand one thing off.",
   "checklist": false,
   "intro": [
@@ -24,8 +24,8 @@
           "text": "A simple list of tasks and time is fine."
         },
         {
-          "title": "Paste it into Claude with this prompt",
-          "text": "Paste your list into Claude, then add this:",
+          "title": "Paste it into Claude or ChatGPT with this prompt",
+          "text": "Paste your list in, then add this:",
           "prompt": "Here is how I spent my week. Sort every task into 3 lists: delegate (someone else could do it), automate (a tool or AI could do it), or drop (it doesn't need doing). For each one say why in one line. Then tell me the one thing to hand off first and how."
         },
         {

@@ -82,6 +82,20 @@
           "prompt": "Turn this into a one page plan."
         }
       ]
+    },
+    {
+      "label": "Not on Team or Enterprise?",
+      "title": "Do this instead",
+      "steps": [
+        {
+          "title": "Use any notetaker and my follow-up prompt",
+          "text": "Claude Meetings needs a Claude Team or Enterprise plan. On any other plan, take the summary from whatever notetaker you use, or your own quick notes, and paste it into Claude or ChatGPT with my follow-up email prompt.",
+          "link": {
+            "href": "/free/follow-up-email-prompt/",
+            "text": "Get the follow-up email prompt"
+          }
+        }
+      ]
     }
   ],
   "closing": "It's a beta, so details can change. Claude's help article has the latest.",

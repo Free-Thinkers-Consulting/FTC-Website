@@ -153,8 +153,12 @@ def guide_page(g):
                          f'<button type="button" class="copy-btn">Copy</button></div>'
                          f'<pre class="copy-text">{e(st["prompt"])}</pre></div>')
             if st.get("link"):
-                body += (f'<p class="step-link"><a href="{e(st["link"]["href"])}" target="_blank" rel="noopener">'
-                         f'{e(st["link"]["text"])} &#8599;</a></p>')
+                href = st["link"]["href"]
+                if href.startswith("/"):  # page on this site: same tab
+                    body += f'<p class="step-link"><a href="{e(href)}">{e(st["link"]["text"])} &rarr;</a></p>'
+                else:
+                    body += (f'<p class="step-link"><a href="{e(href)}" target="_blank" rel="noopener">'
+                             f'{e(st["link"]["text"])} &#8599;</a></p>')
             done = ""
             if g.get("checklist"):
                 done = (f'<label class="step-done"><input type="checkbox" data-step="{n}" /> '
